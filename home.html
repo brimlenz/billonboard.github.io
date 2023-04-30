@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>Home</title>
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/img/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../assets/img/favicons/favicon.ico">
+    <link rel="manifest" href="../../../assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileImage" content="../../../assets/img/favicons/mstile-150x150.png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="../../../vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="../../../vendors/simplebar/simplebar.min.js"></script>
+    <script src="../../../assets/js/config.js"></script>
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&amp;display=swap"
+        rel="stylesheet">
+    <link href="../../../vendors/simplebar/simplebar.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href="../../../assets/css/theme-rtl.min.css" type="text/css" rel="stylesheet" id="style-rtl">
+    <link href="../../../assets/css/theme.min.css" type="text/css" rel="stylesheet" id="style-default">
+    <link href="../../../assets/css/user-rtl.min.css" type="text/css" rel="stylesheet" id="user-style-rtl">
+    <link href="../../../assets/css/user.min.css" type="text/css" rel="stylesheet" id="user-style-default">
+    <script>
+        var phoenixIsRTL = window.config.config.phoenixIsRTL;
+        if (phoenixIsRTL) {
+            var linkDefault = document.getElementById('style-default');
+            var userLinkDefault = document.getElementById('user-style-default');
+            linkDefault.setAttribute('disabled', true);
+            userLinkDefault.setAttribute('disabled', true);
+            document.querySelector('html').setAttribute('dir', 'rtl');
+        } else {
+            var linkRTL = document.getElementById('style-rtl');
+            var userLinkRTL = document.getElementById('user-style-rtl');
+            linkRTL.setAttribute('disabled', true);
+            userLinkRTL.setAttribute('disabled', true);
+        }
+    </script>
+    <!-- ===============================================-->
+    <!--    Maps styling-->
+    <!-- ===============================================-->
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+        <div class="bg-white sticky-top landing-navbar" data-navbar-shadow-on-scroll="data-navbar-shadow-on-scroll">
+            <nav class="navbar navbar-expand-lg container-small px-3 px-lg-7 px-xxl-3"><a
+                    class="navbar-brand flex-1 flex-lg-grow-0" href="../../index.html">
+                    <div class="d-flex align-items-center"><img src="../../assets/img/icons/logo.png" alt="phoenix"
+                            width="27" />
+                        <p class="logo-text ms-2">BillonBoard</p>
+                    </div>
+                </a>
+                <div class="d-lg-none justify-content-end">
+                    <div class="theme-control-toggle fa-icon-wait px-2"><input
+                            class="form-check-input ms-0 theme-control-toggle-input" type="checkbox"
+                            data-theme-control="phoenixTheme" value="dark" id="themeControlToggleSm" /><label
+                            class="mb-0 theme-control-toggle-label theme-control-toggle-light"
+                            for="themeControlToggleSm" data-bs-toggle="tooltip" data-bs-placement="left"
+                            title="Switch theme"><span class="icon" data-feather="moon"></span></label><label
+                            class="mb-0 theme-control-toggle-label theme-control-toggle-dark" for="themeControlToggleSm"
+                            data-bs-toggle="tooltip" data-bs-placement="left" title="Switch theme"><span class="icon"
+                                data-feather="sun"></span></label></div>
+                </div><button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation"><span
+                        class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+
+                    <div class="col-auto order-md-1">
+                        <ul class="navbar-nav navbar-nav-icons flex-row me-n2">
+
+                            <li class="nav-item dropdown"><a class="nav-link px-2" id="navbarDropdownUser"
+                                    href="homepage.html#" role="button" data-bs-toggle="dropdown"
+                                    data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false"><span
+                                        class="text-700" data-feather="user" style="height:20px;width:20px;"></span></a>
+                                <div class="dropdown-menu dropdown-menu-end navbar-dropdown-caret py-0 dropdown-profile shadow border border-300 mt-2"
+                                    aria-labelledby="navbarDropdownUser">
+                                    <div class="card position-relative border-0">
+                                        <div class="card-body p-0">
+                                            <div class="text-center pt-4 pb-3">
+                                                <div class="avatar avatar-xl ">
+                                                    <img class="rounded-circle "
+                                                        src="../../../assets/img/team/72x72/57.webp" alt="" />
+                                                </div>
+                                                <h6 class="mt-2 text-black">Jane Doe</h6>
+                                            </div>
+
+                                        </div>
+                                        <div class="overflow-auto scrollbar">
+                                            <ul class="nav d-flex flex-column mb-2 pb-1">
+                                                <li class="nav-item"><a class="nav-link px-3" href="homepage.html#!">
+                                                        <span class="me-2 text-900"
+                                                            data-feather="user"></span><span>Profile</span></a></li>
+
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="card-footer p-0 border-top">
+                        <div class="px-3"> <a class="btn btn-phoenix-secondary d-flex flex-center w-100"
+                                href="login.html"> <span class="me-2" data-feather="log-out">
+                                </span>Sign out</a></div>
+
+                    </div>
+                </div>
+        </div>
+        </li>
+        </ul>
+        </div>
+
+        </div>
+        </nav>
+        </div>
+
+        <!-- ===============================================-->
+
+        <!--   Google Maps-->
+        <div id="map"></div>
+
+
+
+        <!-- ===============================================-->
+        <!--    card group-->
+        <!-- ===============================================-->
+        <h2 class="text-center justify-content-center mt-4">All BillBoards</h2>
+        <hr>
+    
+        <div class="row-fluid h-100 g-3 ">
+            <div class="card text-dark bg-light m-5 ">
+                <hr>
+            <form class="row row-cols-lg-5 g-3  m-3 justify-content-center">
+                <div class="col-12 ms-1 ">
+                    <label class="sr-only" for="inlineFormSelectPref">Ad Agency</label>
+                    <select class="form-select" id="inlineFormSelectPref">
+                      <option> Select Ad Agency</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                    </select>
+                  </div>
+                <div class="col-12 ms-1">
+                  <label class="sr-only" for="inlineFormInputName">Location</label>
+                  <input class="form-control" id="inlineFormInputName" type="text" placeholder="Enter a Location">
+                </div>
+                <div class="col-12 ms-1">
+                  <label class="sr-only" for="inlineFormInputGroupUsername">Brand</label>
+                  
+                    <input class="form-control" id="inlineFormInputGroupUsername" type="text" placeholder="Search for a Brand">
+                  
+                </div>
+                
+                
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit">Search</button>
+                </div>
+              </form>
+              <hr>
+            </div>
+            
+        </div>
+
+        <div class="row h-100 g-3 justify-content-center">
+            <div class="col-sm-6 col-lg-3 mb-3 mb-md-0">
+                <div class="card text-white h-100">
+                    <img class="card-img-top" src="../../assets/img/generic/54.png" alt="...">
+                    <div class="card-body rounded-top">
+                        <h4 class="card-title">First card title</h4>
+                        <div class="tags d-flex">
+                            <h6 class="m-2">Ad Agency:</h6><a href=""><span
+                                    class="badge badge-phoenix badge-phoenix-primary mb-2">Ad Site</span></a>
+                        </div>
+                        <div class="tags d-flex">
+                            <h6 class="m-2">Location:</h6><a href=""><span
+                                    class="badge badge-phoenix badge-phoenix-danger mb-2 uil-location-pin-alt ">
+                                    Archives</span></a>
+                        </div>
+                        <div class="tags d-flex">
+                            <h6 class="m-2">Brand:</h6><a href=""><span
+                                    class="badge badge-phoenix badge-phoenix-success mb-2 "> Nivea</span></a>
+                        </div>
+                        <div class="tags d-flex">
+                            <h6 class="m-2">BOB Rating:</h6><a href=""><span
+                                    class="badge badge-phoenix badge-phoenix-success mb-2 "> 8.0/10</span></a>
+                        </div>
+
+
+                        <p class="card-text  text-900" style="display: -webkit-box;
+                        overflow : hidden;
+                        text-overflow: ellipsis;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;">This is a wider card with supporting text below as a natural
+                            lead-in
+                            to
+                            additional content. This content is a little bit longer.</p>
+                        <p class="card-text">
+                            <small class="text-muted">Last updated 45 mins ago</small>
+                        </p>
+                        <a class="btn-link px-0 d-flex align-items-center fs--1 fw-bold" href="billboards.html" role="button">Read
+                            more<svg class="svg-inline--fa fa-angle-right ms-2" aria-hidden="true" focusable="false"
+                                data-prefix="fas" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 256 512" data-fa-i2svg="">
+                                <path fill="currentColor"
+                                    d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z">
+                                </path>
+                            </svg>
+                            <!-- <span class="fa-solid fa-angle-right ms-2"></span> Font Awesome fontawesome.com --></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-6 col-lg-3 mb-3 mb-md-0">
+                <div class="card text-white h-100">
+                    <img class="card-img-top" src="../../assets/img/generic/54.png" alt="...">
+                    <div class="card-body rounded-top">
+                        <h4 class="card-title">First card title</h4>
+                        <div class="tags d-flex">
+                            <h6 class="m-2">Ad Agency:</h6><a href=""><span
+                                    class="badge badge-phoenix badge-phoenix-primary mb-2">Ad Site</span></a>
+                        </div>
+                        <div class="tags d-flex">
+                            <h6 class="m-2">Location:</h6><a href=""><span
+                                    class="badge badge-phoenix badge-phoenix-danger mb-2 uil-location-pin-alt ">
+                                    Archives</span></a>
+                        </div>
+                        <div class="tags d-flex">
+                            <h6 class="m-2">Brand:</h6><a href=""><span
+                                    class="badge badge-phoenix badge-phoenix-success mb-2 "> Nivea</span></a>
+                        </div>
+                        <div class="tags d-flex">
+                            <h6 class="m-2">BOB Rating:</h6><a href=""><span
+                                    class="badge badge-phoenix badge-phoenix-success mb-2 "> 8.0/10</span></a>
+                        </div>
+
+
+                        <p class="card-text text-900" style="display: -webkit-box;
+                    overflow : hidden;
+                    text-overflow: ellipsis;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;">This is a wider card with supporting text below as a natural lead-in
+                            to
+                            additional content. This content is a little bit longer.</p>
+                        <p class="card-text">
+                            <small class="text-muted">Last updated 45 mins ago</small>
+                        </p>
+                        <a class="btn-link px-0 d-flex align-items-center fs--1 fw-bold" href="billboards.html" role="button">Read
+                            more<svg class="svg-inline--fa fa-angle-right ms-2" aria-hidden="true" focusable="false"
+                                data-prefix="fas" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 256 512" data-fa-i2svg="">
+                                <path fill="currentColor"
+                                    d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z">
+                                </path>
+                            </svg>
+                            <!-- <span class="fa-solid fa-angle-right ms-2"></span> Font Awesome fontawesome.com --></a>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="col-sm-6 col-lg-3 mb-3 mb-md-0">
+                <div class="card text-white h-100">
+                    <img class="card-img-top" src="../../assets/img/generic/44.png" alt="...">
+                    <div class="card-body rounded-top">
+                        <h4 class="card-title">First card title</h4>
+                        <div class="tags d-flex">
+                            <h6 class="m-2">Ad Agency:</h6>
+                            <a href=""><span class="badge badge-phoenix badge-phoenix-primary mb-2">Magnate
+                                    Ventures</span></a>
+                        </div>
+                        <div class="tags d-flex">
+                            <h6 class="m-2">Location:</h6>
+                            <a href=""><span
+                                    class="badge badge-phoenix badge-phoenix-danger mb-2 uil-location-pin-alt ">
+                                    Nairobi GPO</span></a>
+                        </div>
+                        <div class="tags d-flex">
+                            <h6 class="m-2">Brand:</h6>
+                            <a href=""><span class="badge badge-phoenix badge-phoenix-success mb-2 "> Jumia</span></a>
+                        </div>
+
+                        <div class="tags d-flex">
+                            <h6 class="m-2">BOB Rating:</h6><a href=""><span
+                                    class="badge badge-phoenix badge-phoenix-success mb-2 "> 8.0/10</span></a>
+                        </div>
+                        <p class="card-text  text-900" style="display: -webkit-box;
+                        overflow : hidden;
+                        text-overflow: ellipsis;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;">This is a wider card with supporting text below as a natural
+                            lead-in
+                            to
+                            additional content. This content is a little bit longer.</p>
+                        <p class="card-text">
+                            <small class="text-muted">Last updated 45 mins ago</small>
+                        </p>
+                        <a class="btn-link px-0 d-flex align-items-center fs--1 fw-bold" href="billboards.html" role="button">Read
+                            more<svg class="svg-inline--fa fa-angle-right ms-2" aria-hidden="true" focusable="false"
+                                data-prefix="fas" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 256 512" data-fa-i2svg="">
+                                <path fill="currentColor"
+                                    d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z">
+                                </path>
+                            </svg>
+                            <!-- <span class="fa-solid fa-angle-right ms-2"></span> Font Awesome fontawesome.com --></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3 mb-3 mb-md-0">
+                <div class="card text-white h-100">
+                    <img class="card-img-top" src="../../assets/img/generic/46.png" alt="...">
+                    <div class="card-body rounded-top">
+                        <h4 class="card-title">First card title</h4>
+                        <div class="tags d-flex">
+                            <h6 class="m-2">Ad Agency:</h6>
+                            <a href=""><span class="badge badge-phoenix badge-phoenix-primary mb-2">Firmbridge
+                                    Advertisment</span></a>
+                        </div>
+                        <div class="tags d-flex">
+                            <h6 class="m-2">Location:</h6>
+                            <a href=""><span
+                                    class="badge badge-phoenix badge-phoenix-danger mb-2 uil-location-pin-alt ">
+                                    Railways</span></a>
+                        </div>
+                        <div class="tags d-flex">
+                            <h6 class="m-2">Brand:</h6>
+                            <a href=""><span class="badge badge-phoenix badge-phoenix-success mb-2 "> Colgate</span></a>
+                        </div>
+                        <div class="tags d-flex">
+                            <h6 class="m-2">BOB Rating:</h6><a href=""><span
+                                    class="badge badge-phoenix badge-phoenix-success mb-2 "> 8.0/10</span></a>
+                        </div>
+                        <p class="card-text  text-900" style="display: -webkit-box;
+                        overflow : hidden;
+                        text-overflow: ellipsis;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;">This is a wider card with supporting text below as a natural
+                            lead-in
+                            to
+                            additional content. This content is a little bit longer.</p>
+                        <p class="card-text">
+                            <small class="text-muted">Last updated 45 mins ago</small>
+                        </p>
+                        <a class="btn-link px-0 d-flex align-items-center fs--1 fw-bold" href="billboards.html" role="button">Read
+                            more<svg class="svg-inline--fa fa-angle-right ms-2" aria-hidden="true" focusable="false"
+                                data-prefix="fas" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 256 512" data-fa-i2svg="">
+                                <path fill="currentColor"
+                                    d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z">
+                                </path>
+                            </svg>
+                            <!-- <span class="fa-solid fa-angle-right ms-2"></span> Font Awesome fontawesome.com --></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3 mb-3 mb-md-0">
+                <div class="card text-white h-100">
+                    <img class="card-img-top" src="../../assets/img/generic/45.png" alt="...">
+                    <div class="card-body rounded-top">
+                        <h4 class="card-title">First card title</h4>
+                        <div class="tags d-flex">
+                            <h6 class="m-2">Ad Agency:</h6>
+                            <a href=""><span class="badge badge-phoenix badge-phoenix-primary mb-2">Alliance
+                                    Media</span></a>
+                        </div>
+                        <div class="tags d-flex">
+                            <h6 class="m-2">Location:</h6>
+                            <a href=""><span
+                                    class="badge badge-phoenix badge-phoenix-danger mb-2 uil-location-pin-alt ">
+                                    Maasai Lodge, Magadi Road</span></a>
+                        </div>
+                        <div class="tags d-flex">
+                            <h6 class="m-2">Brand:</h6>
+                            <a href=""><span class="badge badge-phoenix badge-phoenix-success mb-2 "> Jumia</span></a>
+                        </div>
+
+                        <div class="tags d-flex">
+                            <h6 class="m-2">BOB Rating:</h6><a href=""><span
+                                    class="badge badge-phoenix badge-phoenix-success mb-2 "> 8.0/10</span></a>
+                        </div>
+                        <p class="card-text  text-900" style="display: -webkit-box;
+                        overflow : hidden;
+                        text-overflow: ellipsis;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;">This is a wider card with supporting text below as a natural
+                            lead-in
+                            a wider
+                            card with supporting text below as a natural lead-in to additional content. This content is
+                            a
+                            little bit longer.</p>
+                        <p class="card-text">
+                            <small class="text-muted">Last updated 45 mins ago</small>
+                        </p>
+                        <a class="btn-link px-0 d-flex align-items-center fs--1 fw-bold" href="billboards.html" role="button">Read
+                            more<svg class="svg-inline--fa fa-angle-right ms-2" aria-hidden="true" focusable="false"
+                                data-prefix="fas" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 256 512" data-fa-i2svg="">
+                                <path fill="currentColor"
+                                    d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z">
+                                </path>
+                            </svg>
+                            <!-- <span class="fa-solid fa-angle-right ms-2"></span> Font Awesome fontawesome.com --></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3 mb-3 mb-md-0">
+                <div class="card text-white h-100">
+                    <img class="card-img-top" src="../../assets/img/generic/45.png" alt="...">
+                    <div class="card-body rounded-top">
+                        <h4 class="card-title">First card title</h4>
+                        <div class="tags d-flex">
+                            <h6 class="m-2">Ad Agency:</h6>
+                            <a href=""><span class="badge badge-phoenix badge-phoenix-primary mb-2">Alliance
+                                    Media</span></a>
+                        </div>
+                        <div class="tags d-flex">
+                            <h6 class="m-2">Location:</h6>
+                            <a href=""><span
+                                    class="badge badge-phoenix badge-phoenix-danger mb-2 uil-location-pin-alt ">
+                                    Maasai Lodge, Magadi Road</span></a>
+                        </div>
+                        <div class="tags d-flex">
+                            <h6 class="m-2">Brand:</h6>
+                            <a href=""><span class="badge badge-phoenix badge-phoenix-success mb-2 "> Jumia</span></a>
+                        </div>
+
+                        <div class="tags d-flex">
+                            <h6 class="m-2">BOB Rating:</h6><a href=""><span
+                                    class="badge badge-phoenix badge-phoenix-success mb-2 "> 8.0/10</span></a>
+                        </div>
+                        <p class="card-text  text-900" style="display: -webkit-box;
+                        overflow : hidden;
+                        text-overflow: ellipsis;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;">This is a wider card with supporting text below as a natural
+                            lead-in
+                            a wider
+                            card with supporting text below as a natural lead-in to additional content. This content is
+                            a
+                            little bit longer.</p>
+                        <p class="card-text">
+                            <small class="text-muted">Last updated 45 mins ago</small>
+                        </p>
+                        <a class="btn-link px-0 d-flex align-items-center fs--1 fw-bold" href="billboards.html" role="button">Read
+                            more<svg class="svg-inline--fa fa-angle-right ms-2" aria-hidden="true" focusable="false"
+                                data-prefix="fas" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 256 512" data-fa-i2svg="">
+                                <path fill="currentColor"
+                                    d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z">
+                                </path>
+                            </svg>
+                            <!-- <span class="fa-solid fa-angle-right ms-2"></span> Font Awesome fontawesome.com --></a>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+
+        <!-- Center-->
+        <nav aria-label="Page navigation example m-5">
+            <ul class="pagination justify-content-center">
+                <li class="page-item"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item active" aria-current="page"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
+
+        <footer class="footer position-relative">
+            <div class="row g-0 justify-content-between align-items-center h-100">
+                <div class="col-12 col-sm-auto text-center">
+                    <p class="mb-0 mt-2 mt-sm-0 text-900">Thank you for visiting BillonBoard<span
+                            class="d-none d-sm-inline-block"></span><span
+                            class="d-none d-sm-inline-block mx-1">|</span><br class="d-sm-none" />2023 &copy;</p>
+                </div>
+             
+            </div>
+        </footer>
+
+    </main><!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+    </a>
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <!-- 
+      The `defer` attribute causes the callback to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises.
+      See https://developers.google.com/maps/documentation/javascript/load-maps-js-api
+      for more information.
+      -->
+    <script>
+        function initMap() {
+            //map options
+            var options = {
+                zoom: 8,
+                center: {
+                    lat: 0.0236,
+                    lng: 37.9062
+                }
+            };
+
+            //new map
+            var map = new google.maps.Map(document.getElementById('map'), options)
+            /*
+                       //adding marker on the map
+                       var marker = new google.maps.Marker({
+                           position: {
+                               lat: 1.2921,
+                               lng: 36.8219
+                           },
+                           map:map
+                       });
+
+                       var infoWindow = new google.maps.InfoWindow({
+                           content:'<img class="card-img-top" src="../../assets/img/generic/45.png" alt="...">'
+                       });
+
+                       marker.addListener('click', function(){
+                           infoWindow.open(map,marker);
+                           
+                       });*/
+            addMaker({
+                lat: 1.2921,
+                lng: 36.8219
+            })
+
+            addMaker({
+                lat: 0.0917,
+                lng: 34.7680
+            })
+
+
+            //add multiple markers
+
+            function addMaker(coord) {
+                var marker = new google.maps.Marker({
+                    position: coord,
+                    map: map
+                });
+            }
+
+        }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHJxzPHD_egYnhxntqcvfem35YRjruzAg&callback=initMap">
+    </script>
+    <script src="../../../vendors/popper/popper.min.js"></script>
+    <script src="../../../vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="../../../vendors/anchorjs/anchor.min.js"></script>
+    <script src="../../../vendors/is/is.min.js"></script>
+    <script src="../../../vendors/fontawesome/all.min.js"></script>
+    <script src="../../../vendors/lodash/lodash.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="../../../vendors/list.js/list.min.js"></script>
+    <script src="../../../vendors/feather-icons/feather.min.js"></script>
+    <script src="../../../vendors/dayjs/dayjs.min.js"></script>
+    <script src="../../../assets/js/phoenix.js"></script>
+</body>
+
+</html>

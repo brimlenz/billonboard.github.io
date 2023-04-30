@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>Phoenix</title>
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/img/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../assets/img/favicons/favicon.ico">
+    <link rel="manifest" href="../../../assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileImage" content="../../../assets/img/favicons/mstile-150x150.png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="../../../vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="../../../vendors/simplebar/simplebar.min.js"></script>
+    <script src="../../../assets/js/config.js"></script>
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link href="../../../vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="../../../vendors/flatpickr/flatpickr.min.css" rel="stylesheet" />
+    
+    <link href="../../../vendors/prism/prism-okaidia.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&amp;display=swap"
+        rel="stylesheet">
+    <link href="../../../vendors/simplebar/simplebar.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href="../../../assets/css/theme-rtl.min.css" type="text/css" rel="stylesheet" id="style-rtl">
+    <link href="../../../assets/css/theme.min.css" type="text/css" rel="stylesheet" id="style-default">
+    <link href="../../../assets/css/user-rtl.min.css" type="text/css" rel="stylesheet" id="user-style-rtl">
+    <link href="../../../assets/css/user.min.css" type="text/css" rel="stylesheet" id="user-style-default">
+    <script>
+        var phoenixIsRTL = window.config.config.phoenixIsRTL;
+        if (phoenixIsRTL) {
+            var linkDefault = document.getElementById('style-default');
+            var userLinkDefault = document.getElementById('user-style-default');
+            linkDefault.setAttribute('disabled', true);
+            userLinkDefault.setAttribute('disabled', true);
+            document.querySelector('html').setAttribute('dir', 'rtl');
+        } else {
+            var linkRTL = document.getElementById('style-rtl');
+            var userLinkRTL = document.getElementById('user-style-rtl');
+            linkRTL.setAttribute('disabled', true);
+            userLinkRTL.setAttribute('disabled', true);
+        }
+    </script>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+        <div class="bg-white sticky-top landing-navbar" data-navbar-shadow-on-scroll="data-navbar-shadow-on-scroll">
+            <nav class="navbar navbar-expand-lg container-small px-3 px-lg-7 px-xxl-3"><a
+                    class="navbar-brand flex-1 flex-lg-grow-0" href="../../index.html">
+                    <div class="d-flex align-items-center"><img src="../../assets/img/icons/logo.png" alt="phoenix"
+                            width="27" />
+                        <p class="logo-text ms-2">BillonBoard</p>
+                    </div>
+                </a>
+                <div class="d-lg-none justify-content-end">
+                    <div class="theme-control-toggle fa-icon-wait px-2"><input
+                            class="form-check-input ms-0 theme-control-toggle-input" type="checkbox"
+                            data-theme-control="phoenixTheme" value="dark" id="themeControlToggleSm" /><label
+                            class="mb-0 theme-control-toggle-label theme-control-toggle-light"
+                            for="themeControlToggleSm" data-bs-toggle="tooltip" data-bs-placement="left"
+                            title="Switch theme"><span class="icon" data-feather="moon"></span></label><label
+                            class="mb-0 theme-control-toggle-label theme-control-toggle-dark" for="themeControlToggleSm"
+                            data-bs-toggle="tooltip" data-bs-placement="left" title="Switch theme"><span class="icon"
+                                data-feather="sun"></span></label></div>
+                </div><button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation"><span
+                        class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <div class="d-grid d-lg-flex align-items-center">
+                        <a class="btn btn-link text-900 order-1 order-lg-0 ps-3 me-2" href="home.html">Back to
+                            Homepage</a>
+
+                    </div>
+                    <div class="col-auto order-md-1">
+                        <ul class="navbar-nav navbar-nav-icons flex-row me-n2">
+
+                            <li class="nav-item dropdown"><a class="nav-link px-2" id="navbarDropdownUser"
+                                    href="homepage.html#" role="button" data-bs-toggle="dropdown"
+                                    data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false"><span
+                                        class="text-700" data-feather="user" style="height:20px;width:20px;"></span></a>
+                                <div class="dropdown-menu dropdown-menu-end navbar-dropdown-caret py-0 dropdown-profile shadow border border-300 mt-2"
+                                    aria-labelledby="navbarDropdownUser">
+                                    <div class="card position-relative border-0">
+                                        <div class="card-body p-0">
+                                            <div class="text-center pt-4 pb-3">
+                                                <div class="avatar avatar-xl ">
+                                                    <img class="rounded-circle "
+                                                        src="../../../assets/img/team/72x72/57.webp" alt="" />
+                                                </div>
+                                                <h6 class="mt-2 text-black">Jane Doe</h6>
+                                            </div>
+
+                                        </div>
+                                        <div class="overflow-auto scrollbar">
+                                            <ul class="nav d-flex flex-column mb-2 pb-1">
+                                                <li class="nav-item"><a class="nav-link px-3" href="homepage.html#!">
+                                                        <span class="me-2 text-900"
+                                                            data-feather="user"></span><span>Profile</span></a></li>
+
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="card-footer p-0 border-top">
+                        <div class="px-3"> <a class="btn btn-phoenix-secondary d-flex flex-center w-100"
+                                href="login.html"> <span class="me-2" data-feather="log-out">
+                                </span>Sign out</a></div>
+
+                    </div>
+                </div>
+
+        </div>
+        </li>
+        </ul>
+        </div>
+
+        </div>
+
+
+
+
+
+        </nav>
+        </div>
+        <div class="content">
+            <div class="row g-4 justify-content-center">
+                <div class="col-12 col-xl-10 order-1 order-xl-0">
+                    <div class="card shadow-none border border-300 mb-3" data-component-card="data-component-card">
+                        <div class="card-header p-4 border-bottom border-300 bg-soft">
+                            <div class="row g-3 justify-content-between align-items-end">
+                                <div class="col-12 col-md">
+                                    <h3 class="ms-1 mb-3 lh-sm">Precious Gem School</h3>
+                                    <span class="badge badge-phoenix badge-phoenix-primary mb-2">Ad Site</span>
+                                    <hr>
+                                    <h4 class="ms-2 mb-3">Message: <span>New Campus Tuala</span></h4>
+                                    <h5 class="ms-3 mb-3">B.O.B Rating: <span>8.5/10</span></h5>
+                                    <h6 class="ms-4 mb-3">Location: <span> Magadi road, near Maasai Lodge Ongata
+                                            Rongai</span></h6>
+
+                                    <p class="card-text  text-900 ms-5">School will remain clsed till end of january
+                                        2023
+                                        As they prepare fore next year, schools have their billboards out there.
+                                        we came across this billboard when it was being erected on sunday 4th Dec -
+                                        Notice the tiny looking men who are perched on top.</p>
+
+                                    <p class="card-text text-end">
+                                        <small class="text-muted ">Posted 8 December 2022</small>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="collapse code-collapse" id="swiper-with-thumbnail-code">
+                                <pre class="scrollbar" style="max-height:420px"><code class="language-html">&lt;div class=&quot;swiper-theme-container&quot;&gt;
+  &lt;div class=&quot;swiper-container theme-slider&quot; data-swiper='{&quot;spaceBetween&quot;:5,&quot;loop&quot;:true,&quot;loopedSlides&quot;:5,&quot;thumb&quot;:{&quot;spaceBetween&quot;:5,&quot;slidesPerView&quot;:5,&quot;loop&quot;:true,&quot;freeMode&quot;:true,&quot;grabCursor&quot;:true,&quot;loopedSlides&quot;:5,&quot;centeredSlides&quot;:true,&quot;slideToClickedSlide&quot;:true,&quot;watchSlidesVisibility&quot;:true,&quot;watchSlidesProgress&quot;:true},&quot;slideToClickedSlide&quot;:true}'&gt;
+    &lt;div class=&quot;swiper-wrapper&quot;&gt;
+      &lt;div class=&quot;swiper-slide&quot;&gt;&lt;img class=&quot;rounded-1 img-fluid&quot;src=&quot;../../../assets/img/billboard/IMG_0780.JPG&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+      &lt;div class=&quot;swiper-slide&quot;&gt; &lt;img class=&quot;rounded-1 img-fluid&quot; src=&quot;../../../assets/img/billboard/IMG_0816.JPG&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+      &lt;div class=&quot;swiper-slide&quot;&gt; &lt;img class=&quot;rounded-1 img-fluid&quot; src=&quot;../../../assets/img/billboard/IMG_0821.JPG&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+      &lt;div class=&quot;swiper-slide&quot;&gt; &lt;img class=&quot;rounded-1 img-fluid&quot; src=&quot;../../../assets/img/billboard/IMG_0824.JPG&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+      &lt;div class=&quot;swiper-slide&quot;&gt; &lt;img class=&quot;rounded-1 img-fluid&quot; src=&quot;../../../assets/img/billboard/IMG_0822.JPG&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+      &lt;div class=&quot;swiper-slide&quot;&gt; &lt;img class=&quot;rounded-1 img-fluid&quot; src=&quot;../../../assets/img/billboard/IMG_0823.JPG&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;swiper-nav&quot;&gt;
+    &lt;div class=&quot;swiper-button-next&quot;&gt;&lt;span class=&quot;fas fa-chevron-right nav-icon&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;swiper-button-prev&quot;&gt;&lt;span class=&quot;fas fa-chevron-left nav-icon&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+                            <div class="p-4 code-to-copy">
+                                <div class="swiper-theme-container">
+                                    <div class="swiper-container theme-slider"
+                                        data-swiper='{"spaceBetween":5,"loop":true,"loopedSlides":5,"thumb":{"spaceBetween":5,"slidesPerView":5,"loop":true,"freeMode":true,"grabCursor":true,"loopedSlides":5,"centeredSlides":true,"slideToClickedSlide":true,"watchSlidesVisibility":true,"watchSlidesProgress":true},"slideToClickedSlide":true}'>
+                                        <div class="swiper-wrapper ">
+                                            <div class="swiper-slide"><img class="rounded-1 img-fluid"
+                                                    src="../../../assets/img/billboard/IMG_0780.JPG" alt="" /></div>
+                                            <div class="swiper-slide"> <img class="rounded-1 img-fluid"
+                                                    src="../../../assets/img/billboard/IMG_0816.JPG" alt="" /></div>
+                                            <div class="swiper-slide"> <img class="rounded-1 img-fluid"
+                                                    src="../../../assets/img/billboard/IMG_0821.JPG" alt="" /></div>
+                                            <div class="swiper-slide"> <img class="rounded-1 img-fluid"
+                                                    src="../../../assets/img/billboard/IMG_0824.JPG" alt="" /></div>
+                                            <div class="swiper-slide"> <img class="rounded-1 img-fluid"
+                                                    src="../../../assets/img/billboard/IMG_0822.JPG" alt="" /></div>
+                                            <div class="swiper-slide"> <img class="rounded-1 img-fluid"
+                                                    src="../../../assets/img/billboard/IMG_0823.JPG" alt="" /></div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-nav">
+                                        <div class="swiper-button-next"><span
+                                                class="fas fa-chevron-right nav-icon"></span></div>
+                                        <div class="swiper-button-prev"><span
+                                                class="fas fa-chevron-left nav-icon"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+                        </div>
+                    </div>
+
+                    <ul class="nav nav-underline m-3" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation"><a class="nav-link active" id="About-tab"
+                                data-bs-toggle="tab" href="#tab-About" role="tab" aria-controls="tab-About"
+                                aria-selected="true">About</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" id="Photos-tab"
+                                data-bs-toggle="tab" href="#tab-Photos" role="tab" aria-controls="tab-Photos"
+                                aria-selected="false" tabindex="-1">Photos</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" id="Map-tab" data-bs-toggle="tab"
+                                href="#tab-Map" role="tab" aria-controls="tab-Map" aria-selected="false"
+                                tabindex="-1">Map</a></li>
+                    </ul>
+                    <hr>
+                    <div class="tab-content m-3 " id="myTabContent">
+                        <div class="tab-pane fade show active" id="tab-About" role="tabpanel"
+                            aria-labelledby="About-tab">
+                            <table class="table table-borderless mt-4">
+                                <tbody>
+                                    <tr>
+                                        <td class="py-2 ps-0">
+                                            <div class="d-flex"><span class="fs-5 me-2" data-feather="map-pin"
+                                                    style="height:16px; width:16px;"> </span>
+                                                <h5 class="lh-sm me-4">Location</h5>
+                                            </div>
+                                        </td>
+                                        <td class="py-2 fw-bold lh-sm">:</td>
+                                        <td class="py-2 px-3">
+                                            <h5 class="lh-sm fw-normal text-800">Magadi road, Maasai Lodge Ongata Rongai
+                                            </h5>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 ps-0">
+                                            <div class="d-flex"><span class="fs-5 me-2" data-feather="book-open"
+                                                    style="height:16px; width:16px;"> </span>
+                                                <h5 class="lh-sm me-4">Description</h5>
+                                            </div>
+                                        </td>
+                                        <td class="py-2 fw-bold lh-sm">:</td>
+                                        <td class="py-2 px-3">
+                                            <h5 class="lh-lg fw-normal text-800">Lorem ipsum dolor sit, amet consectetur
+                                                adipisicing elit. Dicta, rem reiciendis laborum culpa id quidem quisquam
+                                                necessitatibus accusantium repudiandae aperiam perspiciatis recusandae,
+                                                voluptatibus laboriosam doloribus qui consequatur. Quibusdam, fugiat
+                                                quos!</h5>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 ps-0">
+                                            <div class="d-flex"><span class="fs-5 me-2" data-feather="phone"
+                                                    style="height:16px; width:16px;"> </span>
+                                                <h5 class="lh-sm me-4">Phone</h5>
+                                            </div>
+                                        </td>
+                                        <td class="py-2 fw-bold lh-sm">:</td>
+                                        <td class="py-2 px-3">
+                                            <h5 class="lh-sm fw-normal text-800">+254702765347</h5>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane fade" id="tab-Photos" role="tabpanel" aria-labelledby="Photos-tab">
+                            <div class="row-fluid h-100 g-3 justify-content-center">
+                                <div class="card text-dark bg-light m-5 justify-content-center">
+                                    <hr>
+                                <form class="row row-cols-lg-5 g-3 justify-content-center">
+                                    <div class="col-12 ms-1 ">
+                                        <label class="sr-only" for="inlineFormSelectPref">Pick a range of Dates</label>
+                                        <input class="form-control datetimepicker" id="timepicker2" type="text" placeholder="d/m/y to d/m/y" data-options='{"mode":"range","dateFormat":"d/m/y","disableMobile":true}' />
+
+                                      </div>
+                                    <div class="col-12 ms-1">
+                                      <label class="sr-only" for="inlineFormInputGroupUsername">Brand</label>
+                                      
+                                        <input class="form-control" id="inlineFormInputGroupUsername" type="text" placeholder="Search for a Brand">
+                                      
+                                    </div>
+                                    
+                                    
+                                    <div class="col-12">
+                                      <button class="btn btn-primary" type="submit">Search</button>
+                                    </div>
+                                  </form>
+                                  <hr>
+                                </div>
+                                
+                            </div>
+
+                            <div class="row h-100 g-3 ">
+                                <div class="col-sm-6 col-lg-3 mb-3 mb-md-0">
+                                    <a class="" data-bs-toggle="modal" data-bs-target="#verticallyCentered"> <img
+                                            class="card-img-top" src="../../assets/img/billboard/IMG_0816.JPG"
+                                            alt="..."> </a>
+                                    <p class="card-text text-end">
+                                        <small class="text-muted ">Posted 8 December 2022</small>
+                                    </p>
+                                    <div class="modal fade" id="verticallyCentered" tabindex="-1"
+                                        aria-labelledby="verticallyCenteredModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                
+                                                <div class="modal-body">
+                                                    <img class="card-img-top"
+                                                        src="../../assets/img/billboard/IMG_0821.JPG" alt="...">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 col-lg-3 mb-3 mb-md-0">
+                                    <a class="" data-bs-toggle="modal" data-bs-target="#verticallyCentered"> <img
+                                            class="card-img-top" src="../../assets/img/billboard/IMG_0822.JPG"
+                                            alt="..."> </a>
+                                    <p class="card-text text-end">
+                                        <small class="text-muted ">Posted 8 December 2022</small>
+                                    </p>
+                                    <div class="modal fade" id="verticallyCentered" tabindex="-1"
+                                        aria-labelledby="verticallyCenteredModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+
+                                                <div class="modal-body">
+                                                    <img class="card-img-top"
+                                                        src="../../assets/img/billboard/IMG_0822.JPG" alt="...">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 col-lg-3 mb-3 mb-md-0">
+                                    <a class="" data-bs-toggle="modal" data-bs-target="#verticallyCentered"> <img
+                                            class="card-img-top" src="../../assets/img/billboard/IMG_0823.JPG"
+                                            alt="..."> </a>
+                                    <p class="card-text text-end">
+                                        <small class="text-muted ">Posted 8 December 2022</small>
+                                    </p>
+                                    <div class="modal fade" id="verticallyCentered" tabindex="-1"
+                                        aria-labelledby="verticallyCenteredModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+
+                                                <div class="modal-body">
+                                                    <img class="card-img-top"
+                                                        src="../../assets/img/billboard/IMG_0823.JPG" alt="...">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 col-lg-3 mb-3 mb-md-0">
+                                    <a class="" data-bs-toggle="modal" data-bs-target="#verticallyCentered"> <img
+                                            class="card-img-top" src="../../assets/img/billboard/IMG_0825.JPG"
+                                            alt="..."> </a>
+                                    <p class="card-text text-end">
+                                        <small class="text-muted ">Posted 8 December 2022</small>
+                                    </p>
+                                    <div class="modal fade" id="verticallyCentered" tabindex="-1"
+                                        aria-labelledby="verticallyCenteredModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+
+                                                <div class="modal-body">
+                                                    <img class="card-img-top"
+                                                        src="../../assets/img/billboard/IMG_0825.JPG" alt="...">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 col-lg-3 mb-3 mb-md-0">
+                                    <a class="" data-bs-toggle="modal" data-bs-target="#verticallyCentered"> <img
+                                            class="card-img-top" src="../../assets/img/billboard/IMG_0829.JPG"
+                                            alt="..."> </a>
+                                    <p class="card-text text-end">
+                                        <small class="text-muted ">Posted 8 December 2022</small>
+                                    </p>
+                                    <div class="modal fade" id="verticallyCentered" tabindex="-1"
+                                        aria-labelledby="verticallyCenteredModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+
+                                                <div class="modal-body">
+                                                    <img class="card-img-top"
+                                                        src="../../assets/img/billboard/IMG_0829.JPG" alt="...">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                             <!-- Center-->
+        <nav aria-label="Page navigation example m-5">
+            <ul class="pagination justify-content-center">
+                <li class="page-item"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item active" aria-current="page"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
+
+                        </div>
+                        <div class="tab-pane fade" id="tab-Map" role="tabpanel" aria-labelledby="Map-tab">Etsy mixtape
+                            wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro
+                            fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft
+                            beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR
+                            banksy irony. Leggings gentrify squid 8-bit cred pitchfork.</div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            
+            <footer class="footer position-relative">
+                <div class="row g-0 justify-content-between align-items-center h-100">
+                    <div class="col-12 col-sm-auto text-center">
+                        <p class="mb-0 mt-2 mt-sm-0 text-900">Thank you for visiting BillonBoard<span
+                                class="d-none d-sm-inline-block"></span><span
+                                class="d-none d-sm-inline-block mx-1">|</span><br class="d-sm-none" />2023 &copy;
+                        </p>
+                    </div>
+
+                </div>
+            </footer>
+        </div>
+        </div>
+
+    </main><!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+
+
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script src="../../../vendors/popper/popper.min.js"></script>
+    <script src="../../../vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="../../../vendors/anchorjs/anchor.min.js"></script>
+    <script src="../../../vendors/is/is.min.js"></script>
+    <script src="../../../vendors/fontawesome/all.min.js"></script>
+    <script src="../../../vendors/lodash/lodash.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="../../../vendors/list.js/list.min.js"></script>
+    <script src="../../../vendors/feather-icons/feather.min.js"></script>
+    <script src="../../../vendors/dayjs/dayjs.min.js"></script>
+    <script src="../../../vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="../../../vendors/prism/prism.js"></script>
+    <script src="../../../assets/js/phoenix.js"></script>
+</body>
+
+</html>

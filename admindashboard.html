@@ -86,22 +86,12 @@
                                     aria-controls="tab-agencies" aria-selected="false" tabindex="-1">Agencies</a></li>
                             <li class="nav-item" role="presentation"><a class="nav-link" id="billboards-tab"
                                     data-bs-toggle="tab" href="tabs.html#tab-billboards" role="tab"
-                                    aria-controls="tab-billboards" aria-selected="false" tabindex="-1">Billboards</a>
+                                    aria-controls="tab-billboards" aria-selected="false" tabindex="-2">Billboards</a>
                             </li>
                             <li class="nav-item" role="presentation"><a class="nav-link" id="payment-tab"
                                     data-bs-toggle="tab" href="tabs.html#tab-payment" role="tab"
-                                    aria-controls="tab-payment" aria-selected="false" tabindex="-1">Payments</a></li>
-                            <p class="navbar-vertical-label">Ad Agency</p>
-                            <!-- parent pages-->
-                            <li class="nav-item" role="presentation"><a class="nav-link" id="adbillboard-tab"
-                                    data-bs-toggle="tab" href="tabs.html#tab-adbillboard" role="tab"
-                                    aria-controls="tab-adbillboard" aria-selected="true">Billboards</a></li>
-                                    
-                            <li class="nav-item" role="presentation"><a class="nav-link" id="images-tab"
-                                    data-bs-toggle="tab" href="tabs.html#tab-images" role="tab"
-                                    aria-controls="tab-images" aria-selected="false" tabindex="-1">Images</a></li>
-
-
+                                    aria-controls="tab-payment" aria-selected="false" tabindex="-3">Payments</a></li>
+                        
                         </ul>
 
 
@@ -874,7 +864,7 @@
                         </div>
                     </div>
                     <!--Admin Ad agencies-->
-                    <div class="tab-pane fade show active" id="tab-agencies" role="tabpanel"
+                    <div class="tab-pane fade" id="tab-agencies" role="tabpanel"
                         aria-labelledby="agencies-tab">
                         <div class="mb-9">
                             <div class="row g-2 mb-4">
@@ -931,8 +921,72 @@
                                     <div id="bulk-select-replace-element">
                                         <button class="btn btn-link text-900 me-4 px-0"><span
                                                 class="fa-solid fa-file-export fs--1 me-2"></span>Export</button><button
-                                            class="btn btn-primary"><span class="fas fa-plus me-2"></span>Add
-                                            Billboards</button>
+                                                class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><span class="fas fa-plus me-2"></span>Add
+                                                New Ad Agency</button>
+                          
+                          
+                                                <div class="modal fade" id="staticBackdrop" tabindex="-1" data-bs-backdrop="static" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                  <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                      <div class="modal-header bg-primary">
+                                                        <h5 class="modal-title text-white" id="staticBackdropLabel">Add a New Billboard</h5><button class="btn p-1" type="button" data-bs-dismiss="modal" aria-label="Close"><span class="fas fa-times fs--1 text-white"></span></button>
+                                                      </div>
+                                                      <div class="modal-body">
+                          
+                                                        <!--Form Contents-->
+                          
+                                                        
+                      <form>
+                        <div class="mb-3">
+                          <label class="form-label" for="basic-form-name">Agency Name</label>
+                          <input class="form-control" id="basic-form-name" type="text" placeholder="BillonBoard" required>
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label" for="basic-form-email">Email address</label>
+                          <input class="form-control" id="basic-form-email" type="email" placeholder="billonboard@example.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-form-name">Agency Contacts</label>
+                            <input class="form-control" id="basic-form-name" type="text" placeholder="+254702765347" required>
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label" for="basic-form-name">Agency Address</label>
+                            <input class="form-control" id="basic-form-name" type="text" placeholder="Upper Hill I&M Bank second floor" required>
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label" for="basic-form-name">Payment</label>
+                            <input class="form-control" id="basic-form-name" type="text" placeholder="Upper Hill I&M Bank second floor" required>
+                          </div>
+                        <div class="mb-3">
+                          <label class="form-label" for="basic-form-password">Password</label>
+                          <input class="form-control" id="basic-form-password" type="password" placeholder="Password" required>
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label" for="basic-form-dob">Date of  Establishment</label>
+                          <input class="form-control" id="basic-form-dob" type="date">
+                        </div>
+                    
+                        <div class="mb-3">
+                          <label class="form-label">Upload Agency Logo</label>
+                          <input class="form-control" type="file">
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label" for="basic-form-textarea">Description</label>
+                          <textarea class="form-control" id="basic-form-textarea" rows="3" placeholder="Description of the agency"></textarea>
+                        </div>
+                       
+                        <div class="modal-footer"><a href="admin.html" class="btn btn-primary" type="submit">Submit</a><button class="btn btn-outline-primary" type="button" data-bs-dismiss="modal">Cancel</button></div>
+                         
+                      </form>
+                    
+                                                      
+                          
+                          
+                          
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                                </div>
                                     </div>
                                     <div class="d-none ms-3" id="bulk-select-actions">
                                         <div class="d-flex"><select class="form-select form-select-sm"
@@ -1132,8 +1186,64 @@
                                     <div id="bulk-select-replace-element">
                                         <button class="btn btn-link text-900 me-4 px-0"><span
                                                 class="fa-solid fa-file-export fs--1 me-2"></span>Export</button><button
-                                            class="btn btn-primary"><span class="fas fa-plus me-2"></span>Add
-                                            Billboards</button>
+                                                class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><span class="fas fa-plus me-2"></span>Add
+                                                Billboards</button>
+                          
+                          
+                                                <div class="modal fade" id="staticBackdrop" tabindex="-1" data-bs-backdrop="static" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                  <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                      <div class="modal-header bg-primary">
+                                                        <h5 class="modal-title text-white" id="staticBackdropLabel">Add a New Billboard</h5><button class="btn p-1" type="button" data-bs-dismiss="modal" aria-label="Close"><span class="fas fa-times fs--1 text-white"></span></button>
+                                                      </div>
+                                                      <div class="modal-body">
+                          
+                                                        <!--Form Contents-->
+                          
+                                                        <form>
+                                                          <div class="mb-3">
+                                                            <label class="form-label" for="basic-form-name">Name</label>
+                                                            <input class="form-control" id="basic-form-name" type="text" placeholder="Karatina Phase 1" required>
+                                                          </div>
+                                                          <div class="mb-3">
+                                                            <label class="form-label" for="basic-form-availability">Availability</label>
+                                                            <input class="form-control" id="basic-form-availability" type="date" required>
+                                                          </div>
+                                                          <div class="mb-3">
+                                                            <label class="form-label" for="basic-form-gender">Billboard Type</label>
+                                                            <select class="form-select" id="basic-form-gender" aria-label="Default select example">
+                                                              <option selected="selected">Select the billboard type</option>
+                                                              <option value="male">One sided</option>
+                                                              <option value="female">Double Sided</option>
+                                                              <option value="other">Triple Sided</option>
+                                                            </select required>
+                                                          </div>
+                                                          <div class="mb-3">
+                                                            <label class="form-label" for="basic-form-name">Location Coordinates</label>
+                                                            <input class="form-control" id="basic-form-name" type="text" placeholder="lat: 1.2921,
+                                                            lng: 36.8219" required>
+                                                          </div>
+                          
+                                                          <div class="mb-3">
+                                                            <label class="form-label">Upload the Current Ad Campaign (Optional)</label>
+                                                            <input class="form-control" type="file">
+                                                          </div>
+                          
+                                                          <div class="mb-3">
+                                                            <label class="form-label" for="basic-form-textarea">Description</label>
+                                                            <textarea class="form-control" id="basic-form-textarea" rows="3" placeholder="Describe the Billboard Structure" required></textarea>
+                                                          </div>
+                                                          <div class="modal-footer"><a href="admin.html" class="btn btn-primary" type="submit">Submit</a><button class="btn btn-outline-primary" type="button" data-bs-dismiss="modal">Cancel</button></div>
+                                                   
+                                                        </form>
+                                                      
+                          
+                          
+                          
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                                </div>
                                     </div>
                                     <div class="d-none ms-3" id="bulk-select-actions">
                                         <div class="d-flex"><select class="form-select form-select-sm"
@@ -1583,337 +1693,7 @@
                     </div>
                 </div>
 
-                <!--Agency Billboard-->
-                <div class="tab-pane fade" id="tab-adbillboard" role="tabpanel" aria-labelledby="adbillboard-tab">
-                    <div class="mb-9">
-                        <div class="row g-2 mb-4">
-                            <div class="col-auto">
-                                <h2 class="mb-0">Manage Billboards</h2>
-                            </div>
-                        </div>
-
-                        <div id="products"
-                            data-list='{"valueNames":["user","email","phone-number","subscription",],"page":10,"pagination":true}'>
-
-
-                            <div class="d-flex align-items-center justify-content-end my-3">
-
-                                <div class="col-auto">
-                                    <div class="search-box me-2">
-                                        <form class="position-relative" data-bs-toggle="search"
-                                            data-bs-display="static"><input class="form-control search-input search"
-                                                type="search" placeholder="Search Location" aria-label="Search" />
-                                            <span class="fas fa-search search-box-icon"></span>
-                                        </form>
-                                    </div>
-
-                                </div>
-
-                                <div id="bulk-select-replace-element">
-                                    <button class="btn btn-link text-900 me-4 px-0"><span
-                                            class="fa-solid fa-file-export fs--1 me-2"></span>Export</button><button
-                                        class="btn btn-primary"><span class="fas fa-plus me-2"></span>Add
-                                        Billboards</button>
-                                </div>
-                                <div class="d-none ms-3" id="bulk-select-actions">
-                                    <div class="d-flex"><select class="form-select form-select-sm"
-                                            aria-label="Bulk actions">
-                                            <option selected="selected">Bulk actions</option>
-                                            <option value="Delete">Delete</option>
-
-                                        </select><button class="btn btn-phoenix-danger btn-sm ms-2"
-                                            type="button">Apply</button></div>
-                                </div>
-                            </div>
-                            <div id="tableExample"
-                                data-list="{&quot;valueNames&quot;:[&quot;name&quot;,&quot;email&quot;,&quot;age&quot;],&quot;page&quot;:5,&quot;pagination&quot;:true}">
-                                <div class="table-responsive mx-n1 px-1">
-                                    <table class="table table-sm border-top border-200 fs--1 mb-0">
-                                        <thead>
-                                            <tr>
-                                                <th class="white-space-nowrap fs--1 align-middle ps-0"
-                                                    style="max-width:20px; width:18px;">
-                                                    <div class="form-check mb-0 fs-0"><input class="form-check-input"
-                                                            id="bulk-select-example" type="checkbox"
-                                                            data-bulk-select="{&quot;body&quot;:&quot;bulk-select-body&quot;,&quot;actions&quot;:&quot;bulk-select-actions&quot;,&quot;replacedElement&quot;:&quot;bulk-select-replace-element&quot;}">
-                                                    </div>
-                                                </th>
-                                                <th class="sort align-middle ps-3" data-sort="name">Name</th>
-                                                <th class="sort align-middle ps-3" data-sort="ad-agency">Availability
-                                                </th>
-                                                <th class="sort align-middle" data-sort="img">Type</th>
-                                                <th class="sort align-middle" data-sort="address">Location</th>
-                                                <th class="sort text-end align-middle pe-0" scope="col">ACTION</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="list" id="bulk-select-body">
-                                            <tr>
-                                                <td class="fs--1 align-middle">
-                                                    <div class="form-check mb-0 fs-0"><input class="form-check-input"
-                                                            type="checkbox"
-                                                            data-bulk-select-row="{&quot;name&quot;:&quot;Anna&quot;,&quot;Rating&quot;:&quot;anna@example.com&quot;,&quot;age&quot;:18}">
-                                                    </div>
-                                                </td>
-                                                <td class="align-middle ps-3 name">Karatina Phase 1</td>
-                                                <td class="align-middle ad-agency">June 25 023</td>
-                                                <td class="align-middle desc">Digital</td>
-                                                <td class="align-middle address">Magadi Road</td>
-
-                                                <td class="align-middle white-space-nowrap text-end pe-0">
-                                                    <div class="font-sans-serif btn-reveal-trigger position-static">
-                                                        <button
-                                                            class="btn btn-sm dropdown-toggle dropdown-caret-none transition-none btn-reveal fs--2"
-                                                            type="button" data-bs-toggle="dropdown"
-                                                            data-boundary="window" aria-haspopup="true"
-                                                            aria-expanded="false" data-bs-reference="parent"><svg
-                                                                class="svg-inline--fa fa-ellipsis fs--2"
-                                                                aria-hidden="true" focusable="false" data-prefix="fas"
-                                                                data-icon="ellipsis" role="img"
-                                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
-                                                                data-fa-i2svg="">
-                                                                <path fill="currentColor"
-                                                                    d="M120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200C94.93 200 120 225.1 120 256zM280 256C280 286.9 254.9 312 224 312C193.1 312 168 286.9 168 256C168 225.1 193.1 200 224 200C254.9 200 280 225.1 280 256zM328 256C328 225.1 353.1 200 384 200C414.9 200 440 225.1 440 256C440 286.9 414.9 312 384 312C353.1 312 328 286.9 328 256z">
-                                                                </path>
-                                                            </svg>
-                                                            <!-- <span class="fas fa-ellipsis-h fs--2"></span> Font Awesome fontawesome.com --></button>
-                                                        <div class="dropdown-menu dropdown-menu-end py-2" style=""><a
-                                                                class="dropdown-item" href="view.html">View</a><a
-                                                                class="dropdown-item" href="#!">Edit</a>
-                                                            <div class="dropdown-divider"></div><a
-                                                                class="dropdown-item text-danger" href="#!">Remove</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="d-flex flex-between-center pt-3 mb-3">
-                                    <div class="pagination d-none">
-                                        <li class="active"><button class="page" type="button" data-i="1"
-                                                data-page="5">1</button></li>
-                                        <li><button class="page" type="button" data-i="2" data-page="5">2</button></li>
-                                        <li><button class="page" type="button" data-i="3" data-page="5">3</button></li>
-                                    </div>
-                                    <p class="mb-0 fs--1">
-                                        <span class="d-none d-sm-inline-block" data-list-info="data-list-info">1 to 5
-                                            <span class="text-600"> Items of </span>15</span>
-                                        <span class="d-none d-sm-inline-block"> — </span>
-                                        <a class="fw-semi-bold" href="#!" data-list-view="*">
-                                            View all
-                                            <svg class="svg-inline--fa fa-angle-right ms-1" data-fa-transform="down-1"
-                                                aria-hidden="true" focusable="false" data-prefix="fas"
-                                                data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 256 512" data-fa-i2svg=""
-                                                style="transform-origin: 0.25em 0.5625em;">
-                                                <g transform="translate(128 256)">
-                                                    <g transform="translate(0, 32)  scale(1, 1)  rotate(0 0 0)">
-                                                        <path fill="currentColor"
-                                                            d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
-                                                            transform="translate(-128 -256)"></path>
-                                                    </g>
-                                                </g>
-                                            </svg>
-                                            <!-- <span class="fas fa-angle-right ms-1" data-fa-transform="down-1"></span> Font Awesome fontawesome.com -->
-                                        </a><a class="fw-semi-bold d-none" href="#!" data-list-view="less">
-                                            View Less
-                                            <svg class="svg-inline--fa fa-angle-right ms-1" data-fa-transform="down-1"
-                                                aria-hidden="true" focusable="false" data-prefix="fas"
-                                                data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 256 512" data-fa-i2svg=""
-                                                style="transform-origin: 0.25em 0.5625em;">
-                                                <g transform="translate(128 256)">
-                                                    <g transform="translate(0, 32)  scale(1, 1)  rotate(0 0 0)">
-                                                        <path fill="currentColor"
-                                                            d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
-                                                            transform="translate(-128 -256)"></path>
-                                                    </g>
-                                                </g>
-                                            </svg>
-                                            <!-- <span class="fas fa-angle-right ms-1" data-fa-transform="down-1"></span> Font Awesome fontawesome.com -->
-                                        </a>
-                                    </p>
-                                    <div class="d-flex">
-                                        <button class="btn btn-sm btn-primary disabled" type="button"
-                                            data-list-pagination="prev" disabled=""><span>Previous</span></button>
-                                        <button class="btn btn-sm btn-primary px-4 ms-2" type="button"
-                                            data-list-pagination="next"><span>Next</span></button>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-
-                <!--Agency Images-->
-                <div class="tab-pane fade" id="tab-images" role="tabpanel" aria-labelledby="images-tab">
-                    <div class="mb-9">
-                        <div class="row g-2 mb-4">
-                            <div class="col-auto">
-                                <h2 class="mb-0">Manage Billboard Images</h2>
-                            </div>
-                        </div>
-
-                        <div id="products"
-                            data-list='{"valueNames":["user","email","phone-number","subscription",],"page":10,"pagination":true}'>
-
-
-                            <div class="col-auto">
-                                <div class="search-box me-2">
-                                    <form class="position-relative" data-bs-toggle="search" data-bs-display="static">
-                                        <input class="form-control search-input search" type="search"
-                                            placeholder="Search Location" aria-label="Search" />
-                                        <span class="fas fa-search search-box-icon"></span>
-                                    </form>
-                                </div>
-
-                            </div>
-
-                            <div id="bulk-select-replace-element">
-                                <button class="btn btn-link text-900 me-4 px-0"><span
-                                        class="fa-solid fa-file-export fs--1 me-2"></span>Export</button><button
-                                    class="btn btn-primary"><span class="fas fa-plus me-2"></span>Add
-                                    Billboards</button>
-                            </div>
-                            <div class="d-none ms-3" id="bulk-select-actions">
-                                <div class="d-flex"><select class="form-select form-select-sm"
-                                        aria-label="Bulk actions">
-                                        <option selected="selected">Bulk actions</option>
-                                        <option value="Delete">Delete</option>
-
-                                    </select><button class="btn btn-phoenix-danger btn-sm ms-2"
-                                        type="button">Apply</button></div>
-                            </div>
-                        </div>
-                        <div id="tableExample"
-                            data-list="{&quot;valueNames&quot;:[&quot;name&quot;,&quot;email&quot;,&quot;age&quot;],&quot;page&quot;:5,&quot;pagination&quot;:true}">
-                            <div class="table-responsive mx-n1 px-1">
-                                <table class="table table-sm border-top border-200 fs--1 mb-0">
-                                    <thead>
-                                        <tr>
-                                            <th class="white-space-nowrap fs--1 align-middle ps-0"
-                                                style="max-width:20px; width:18px;">
-                                                <div class="form-check mb-0 fs-0"><input class="form-check-input"
-                                                        id="bulk-select-example" type="checkbox"
-                                                        data-bulk-select="{&quot;body&quot;:&quot;bulk-select-body&quot;,&quot;actions&quot;:&quot;bulk-select-actions&quot;,&quot;replacedElement&quot;:&quot;bulk-select-replace-element&quot;}">
-                                                </div>
-                                            </th>
-                                            <th class="sort align-middle ps-3" data-sort="name">Name</th>
-                                            <th class="sort align-middle ps-3" data-sort="ad-agency">Category</th>
-                                            <th class="sort align-middle" data-sort="Rating">Rating</th>
-                                            <th class="sort align-middle" data-sort="desc">Description</th>
-                                            <th class="sort align-middle" data-sort="img">Images</th>
-                                            <th class="sort align-middle" data-sort="address">Address</th>
-                                            <th class="sort text-end align-middle pe-0" scope="col">ACTION</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="list" id="bulk-select-body">
-                                        <tr>
-                                            <td class="fs--1 align-middle">
-                                                <div class="form-check mb-0 fs-0"><input class="form-check-input"
-                                                        type="checkbox"
-                                                        data-bulk-select-row="{&quot;name&quot;:&quot;Anna&quot;,&quot;Rating&quot;:&quot;anna@example.com&quot;,&quot;age&quot;:18}">
-                                                </div>
-                                            </td>
-                                            <td class="align-middle ps-3 name">Jumia</td>
-                                            <td class="align-middle ad-agency">Christmas</td>
-                                            <td class="align-middle rating">8.5/10</td>
-                                            <td class="align-middle desc">Free</td>
-                                            <td class="align-middle img">
-                                                <img src="../../../assets/img/billboard/IMG_0780.JPG" class="img-fluid"
-                                                    alt="..." width="40" height="40">
-                                            </td>
-                                            <td class="align-middle address">Magadi Road</td>
-
-                                            <td class="align-middle white-space-nowrap text-end pe-0">
-                                                <div class="font-sans-serif btn-reveal-trigger position-static"><button
-                                                        class="btn btn-sm dropdown-toggle dropdown-caret-none transition-none btn-reveal fs--2"
-                                                        type="button" data-bs-toggle="dropdown" data-boundary="window"
-                                                        aria-haspopup="true" aria-expanded="false"
-                                                        data-bs-reference="parent"><svg
-                                                            class="svg-inline--fa fa-ellipsis fs--2" aria-hidden="true"
-                                                            focusable="false" data-prefix="fas" data-icon="ellipsis"
-                                                            role="img" xmlns="http://www.w3.org/2000/svg"
-                                                            viewBox="0 0 448 512" data-fa-i2svg="">
-                                                            <path fill="currentColor"
-                                                                d="M120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200C94.93 200 120 225.1 120 256zM280 256C280 286.9 254.9 312 224 312C193.1 312 168 286.9 168 256C168 225.1 193.1 200 224 200C254.9 200 280 225.1 280 256zM328 256C328 225.1 353.1 200 384 200C414.9 200 440 225.1 440 256C440 286.9 414.9 312 384 312C353.1 312 328 286.9 328 256z">
-                                                            </path>
-                                                        </svg>
-                                                        <!-- <span class="fas fa-ellipsis-h fs--2"></span> Font Awesome fontawesome.com --></button>
-                                                    <div class="dropdown-menu dropdown-menu-end py-2" style=""><a
-                                                            class="dropdown-item" href="view.html">View</a><a
-                                                            class="dropdown-item" href="#!">Edit</a>
-                                                        <div class="dropdown-divider"></div><a
-                                                            class="dropdown-item text-danger" href="#!">Remove</a>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="d-flex flex-between-center pt-3 mb-3">
-                                <div class="pagination d-none">
-                                    <li class="active"><button class="page" type="button" data-i="1"
-                                            data-page="5">1</button></li>
-                                    <li><button class="page" type="button" data-i="2" data-page="5">2</button></li>
-                                    <li><button class="page" type="button" data-i="3" data-page="5">3</button></li>
-                                </div>
-                                <p class="mb-0 fs--1">
-                                    <span class="d-none d-sm-inline-block" data-list-info="data-list-info">1 to 5 <span
-                                            class="text-600"> Items of </span>15</span>
-                                    <span class="d-none d-sm-inline-block"> — </span>
-                                    <a class="fw-semi-bold" href="#!" data-list-view="*">
-                                        View all
-                                        <svg class="svg-inline--fa fa-angle-right ms-1" data-fa-transform="down-1"
-                                            aria-hidden="true" focusable="false" data-prefix="fas"
-                                            data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 256 512" data-fa-i2svg=""
-                                            style="transform-origin: 0.25em 0.5625em;">
-                                            <g transform="translate(128 256)">
-                                                <g transform="translate(0, 32)  scale(1, 1)  rotate(0 0 0)">
-                                                    <path fill="currentColor"
-                                                        d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
-                                                        transform="translate(-128 -256)"></path>
-                                                </g>
-                                            </g>
-                                        </svg>
-                                        <!-- <span class="fas fa-angle-right ms-1" data-fa-transform="down-1"></span> Font Awesome fontawesome.com -->
-                                    </a><a class="fw-semi-bold d-none" href="#!" data-list-view="less">
-                                        View Less
-                                        <svg class="svg-inline--fa fa-angle-right ms-1" data-fa-transform="down-1"
-                                            aria-hidden="true" focusable="false" data-prefix="fas"
-                                            data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 256 512" data-fa-i2svg=""
-                                            style="transform-origin: 0.25em 0.5625em;">
-                                            <g transform="translate(128 256)">
-                                                <g transform="translate(0, 32)  scale(1, 1)  rotate(0 0 0)">
-                                                    <path fill="currentColor"
-                                                        d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
-                                                        transform="translate(-128 -256)"></path>
-                                                </g>
-                                            </g>
-                                        </svg>
-                                        <!-- <span class="fas fa-angle-right ms-1" data-fa-transform="down-1"></span> Font Awesome fontawesome.com -->
-                                    </a>
-                                </p>
-                                <div class="d-flex">
-                                    <button class="btn btn-sm btn-primary disabled" type="button"
-                                        data-list-pagination="prev" disabled=""><span>Previous</span></button>
-                                    <button class="btn btn-sm btn-primary px-4 ms-2" type="button"
-                                        data-list-pagination="next"><span>Next</span></button>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
+                
             </div>
 
         </div>

@@ -187,6 +187,7 @@
                                 </li>
 
                             </ul>
+                            <form id="sign-in-form">
                             <div class="tab-content mt-3" id="myTabContent">
                                 <div class="tab-pane fade show active"
                                     id="tab-email" role="tabpanel"
@@ -196,6 +197,7 @@
                                         <div class="form-icon-container"><input
                                                 class="form-control form-icon-input"
                                                 id="email"
+                                                name="email"
                                                 type="email" placeholder="email" /><span
                                                 class="far fa-envelope text-900 fs--1 form-icon"></span></div>
                                     </div></div>
@@ -207,7 +209,7 @@
                                         <div class="input-group mb-3">
         
                                             <span class="input-group-text d-flex" id="basic-addon1">+254</span>
-                                            <input class="form-control" type="text" placeholder="phone number"
+                                            <input class="form-control" type="text" name="phone" placeholder="phone number"
                                                 aria-label="phone number" aria-describedby="basic-addon1" />
                                         </div>
                                     </div>
@@ -218,6 +220,7 @@
                                 <div class="form-icon-container"><input
                                         class="form-control form-icon-input"
                                         id="password"
+                                        name="password"
                                         type="password" placeholder="Password" /><span
                                         class="fas fa-key text-900 fs--1 form-icon"></span></div>
                             </div>
@@ -234,8 +237,10 @@
                                         class="fs--1 fw-semi-bold"
                                         href="forgot-password.html">Forgot
                                         Password?</a></div>
-                            </div><a class="btn btn-primary w-100 mb-3"
-                                href="home.html">Sign In</a>
+                            <button class="btn btn-primary w-100 mb-3" type="submit">
+                                Sign in
+                            </button>
+                        </form>
                             <div class="text-center"><a class="fs--1 fw-bold"
                                     href="sign-up.html">Create an account</a>
                             </div>
@@ -261,6 +266,8 @@
             <!-- ===============================================-->
             <!--    JavaScripts-->
             <!-- ===============================================-->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+            <script src="./scripts/signin.js"></script>
             <script src="../../../vendors/popper/popper.min.js"></script>
             <script src="../../../vendors/bootstrap/bootstrap.min.js"></script>
             <script src="../../../vendors/anchorjs/anchor.min.js"></script>

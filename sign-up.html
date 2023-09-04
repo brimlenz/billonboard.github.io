@@ -113,30 +113,34 @@
                             <hr class="bg-200" />
                             <div class="divider-content-center">or use Phone Number </div>
                         </div>
-                        <form>
+                        <form id="sign-up-form">
                             <div class="row g-3 mb-3">
                                 <div class="col-md-6"><label class="form-label"
                                         for="firstname">First Name</label><input class="form-control form-icon-input"
-                                        id="firstname" type="text" placeholder="First Name" required /></div>
+                                        id="firstname" name="firstname" type="text" placeholder="First Name" required /></div>
                                 <div class="col-md-6"><label class="form-label" for="lastname">Last Name</label><input class="form-control form-icon-input"
-                                        id="lastName" type="text" placeholder="Last Name"
+                                        id="lastName" name="lastName" type="text" placeholder="Last Name"
                                         required /></div>
                             </div>
-                            
+                            <label class="form-label" for="email">Email</label>
+                            <div class="input-group mb-3">
+                                <input class="form-control" type="email" name="email" placeholder="Email"
+                                    aria-label="email" aria-describedby="basic-addon1" />
+                            </div>
                                 <label class="form-label" for="Phone">Phone Number</label>
                                 <div class="input-group mb-3">
 
                                     <span class="input-group-text d-flex" id="basic-addon1">+254</span>
-                                    <input class="form-control" type="text" placeholder="phone number"
+                                    <input class="form-control" type="text" name="phone" placeholder="phone number"
                                         aria-label="phone number" aria-describedby="basic-addon1" />
                                 </div>
                                 <div class="row g-3 mb-3">
                                     <div class="col-md-6"><label class="form-label"
                                             for="password">Password</label><input class="form-control form-icon-input"
-                                            id="password" type="password" placeholder="Password" required /></div>
+                                            id="password" type="password" name="password" placeholder="Password" required /></div>
                                     <div class="col-md-6"><label class="form-label" for="confirmPassword">Confirm
                                             Password</label><input class="form-control form-icon-input"
-                                            id="confirmPassword" type="password" placeholder="Confirm Password"
+                                            id="confirmPassword" name="confirmPassword" type="password" placeholder="Confirm Password"
                                             required /></div>
                                 </div>
                                 <div class="form-check mb-3"><input class="form-check-input" id="termsService"
@@ -145,8 +149,11 @@
                                         accept the <a href="sign-up.html#!">terms </a>and <a
                                             href="sign-up.html#!">privacy
                                             policy</a></label></div>
-                                <a class="btn btn-primary w-100 mb-3" href="pricing.html">
-                                    Sign up</a>
+                                <button class="btn btn-primary w-100 mb-3" type="submit">
+                                    Sign up
+                                </button>
+                                <!-- <a class="btn btn-primary w-100 mb-3" href="pricing.html">
+                                    Sign up</a> -->
                                 <div class="text-center"><a class="fs--1 fw-bold" href="login.html">Sign in to an
                                         existing
                                         account</a></div>
@@ -178,6 +185,8 @@
     <!-- ===============================================-->
     <!--    JavaScripts-->
     <!-- ===============================================-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+    <script src="./scripts/signup.js"></script>
     <script src="../../../vendors/popper/popper.min.js"></script>
     <script src="../../../vendors/bootstrap/bootstrap.min.js"></script>
     <script src="../../../vendors/anchorjs/anchor.min.js"></script>

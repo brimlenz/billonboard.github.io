@@ -710,10 +710,51 @@
                                 <!-- <span class="fas fa-ellipsis-h fs--2"></span> Font Awesome fontawesome.com --></button>
                               <div class="dropdown-menu dropdown-menu-end py-2" style><a class="dropdown-item"
                                   href="view.html">View</a><a class="dropdown-item" href="#!">Edit</a>
-                                <div class="dropdown-divider"></div><a class="dropdown-item text-danger"
-                                  href="#!">Remove</a>
-                              </div>
+                                <div class="dropdown-divider"></div><a
+                                class="dropdown-item text-danger"
+                                href="#!" data-bs-toggle="modal" data-bs-target="#removeBillboard">Remove
+                                
+                            </a>
                             </div>
+                            <!--Modal for deleting a billboard-->
+                                                           
+                            <div class="modal fade"
+                            id="removeBillboard"
+                            tabindex="-1"
+                            aria-labelledby="removeBillboardModalLabel"
+                            aria-hidden="true">
+                            <div
+                                class="modal-dialog modal-dialog-centered">
+                                <div
+                                    class="modal-content">
+                                    <div
+                                        class="modal-header">
+                                        <h5
+                                            class="modal-title"
+                                            id="removeBillboardModalLabel">Delete Billboard</h5><button
+                                            class="btn p-1"
+                                            type="button"
+                                            data-bs-dismiss="modal"
+                                            aria-label="Close"><span
+                                                class="fas fa-times fs--1"></span></button>
+                                    </div>
+                                    <div
+                                        class="modal-body">
+                                        <p
+                                            class="text-700 lh-lg mb-0">Seriously, are you sure you want to proceed deleting this Billboard?
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="modal-footer"><button
+                                            class="btn btn-danger"
+                                            type="button">Yes</button>
+                                            <button
+                                            class="btn btn-outline-danger"
+                                            type="button"
+                                            data-bs-dismiss="modal">No</button></div>
+                                </div>
+                            </div>
+                        </div>
                           </td>
                         </tr>
 

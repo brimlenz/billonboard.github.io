@@ -116,7 +116,13 @@
                                         data-bs-toggle="tab"
                                         href="tabs.html#tab-payment" role="tab"
                                         aria-controls="tab-payment"
-                                        aria-selected="false" tabindex="-3">Payments</a></li>
+                                        aria-selected="false" tabindex="-3">Payments</a>
+                                </li>
+
+                                 <li class="nav-item" role="presentation"><a class="nav-link" id="images-tab" data-bs-toggle="tab"
+                                            href="tabs.html#tab-images" role="tab" aria-controls="tab-images" tabindex="-1"
+                                            aria-selected="false">Images</a>
+                                </li>
 
                             </ul>
 
@@ -1085,13 +1091,65 @@
                                                                         class="dropdown-item"
                                                                         href="userdetails.html">View</a><a
                                                                         class="dropdown-item"
-                                                                        href="#!">Export</a>
+                                                                        href="#!">Edit</a>
                                                                     <div
-                                                                        class="dropdown-divider"></div><a
+                                                                        class="dropdown-divider">
+                                                                    </div>
+                                                                    <a
                                                                         class="dropdown-item text-danger"
-                                                                        href="#!">Remove</a>
+                                                                        href="#!" data-bs-toggle="modal" data-bs-target="#remove">Remove
+                                                                        
+                                                                    </a>
+                                                                       
+                                                                        
+                                                                        
                                                                 </div>
+                                                               
+                      
+                    
                                                             </div>
+                                                            <!--Modal for deleting a user-->
+                                                           
+                                                                <div class="modal fade"
+                                                                    id="remove"
+                                                                    tabindex="-1"
+                                                                    aria-labelledby="removeModalLabel"
+                                                                    aria-hidden="true">
+                                                                    <div
+                                                                        class="modal-dialog modal-dialog-centered">
+                                                                        <div
+                                                                            class="modal-content">
+                                                                            <div
+                                                                                class="modal-header">
+                                                                                <h5
+                                                                                    class="modal-title"
+                                                                                    id="removeModalLabel">Delete Account</h5><button
+                                                                                    class="btn p-1"
+                                                                                    type="button"
+                                                                                    data-bs-dismiss="modal"
+                                                                                    aria-label="Close"><span
+                                                                                        class="fas fa-times fs--1"></span></button>
+                                                                            </div>
+                                                                            <div
+                                                                                class="modal-body">
+                                                                                <p
+                                                                                    class="text-700 lh-lg mb-0">Seriously, are you sure you want to proceed deleting the account?
+                                                                                </p>
+                                                                            </div>
+                                                                            <div
+                                                                                class="modal-footer"><button
+                                                                                    class="btn btn-danger"
+                                                                                    type="button">Yes</button>
+                                                                                    <button
+                                                                                    class="btn btn-outline-danger"
+                                                                                    type="button"
+                                                                                    data-bs-dismiss="modal">No</button></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+            
+                                                            
+                                                        
                                                         </td>
                                                     </tr>
 
@@ -1523,9 +1581,50 @@
                                                                     <div
                                                                         class="dropdown-divider"></div><a
                                                                         class="dropdown-item text-danger"
-                                                                        href="#!">Remove</a>
+                                                                        href="#!" data-bs-toggle="modal" data-bs-target="#removeAgency">Remove
+                                                                        
+                                                                    </a>
                                                                 </div>
                                                             </div>
+                                                             <!--Modal for deleting an Ad Agency-->
+                                                           
+                                                             <div class="modal fade"
+                                                             id="removeAgency"
+                                                             tabindex="-1"
+                                                             aria-labelledby="removeAgencyModalLabel"
+                                                             aria-hidden="true">
+                                                             <div
+                                                                 class="modal-dialog modal-dialog-centered">
+                                                                 <div
+                                                                     class="modal-content">
+                                                                     <div
+                                                                         class="modal-header">
+                                                                         <h5
+                                                                             class="modal-title"
+                                                                             id="removeAgencyModalLabel">Delete Billboard</h5><button
+                                                                             class="btn p-1"
+                                                                             type="button"
+                                                                             data-bs-dismiss="modal"
+                                                                             aria-label="Close"><span
+                                                                                 class="fas fa-times fs--1"></span></button>
+                                                                     </div>
+                                                                     <div
+                                                                         class="modal-body">
+                                                                         <p
+                                                                             class="text-700 lh-lg mb-0">Seriously, are you sure you want to proceed deleting this Ad Agency?
+                                                                         </p>
+                                                                     </div>
+                                                                     <div
+                                                                         class="modal-footer"><button
+                                                                             class="btn btn-danger"
+                                                                             type="button">Yes</button>
+                                                                             <button
+                                                                             class="btn btn-outline-danger"
+                                                                             type="button"
+                                                                             data-bs-dismiss="modal">No</button></div>
+                                                                 </div>
+                                                             </div>
+                                                         </div>
                                                         </td>
                                                     </tr>
 
@@ -1952,9 +2051,51 @@
                                                                     <div
                                                                         class="dropdown-divider"></div><a
                                                                         class="dropdown-item text-danger"
-                                                                        href="#!">Remove</a>
+                                                                        href="#!" data-bs-toggle="modal" data-bs-target="#removeBillboard">Remove
+                                                                        
+                                                                    </a>
+                                                                       
                                                                 </div>
                                                             </div>
+                                                            <!--Modal for deleting a billboard-->
+                                                           
+                                                            <div class="modal fade"
+                                                            id="removeBillboard"
+                                                            tabindex="-1"
+                                                            aria-labelledby="removeBillboardModalLabel"
+                                                            aria-hidden="true">
+                                                            <div
+                                                                class="modal-dialog modal-dialog-centered">
+                                                                <div
+                                                                    class="modal-content">
+                                                                    <div
+                                                                        class="modal-header">
+                                                                        <h5
+                                                                            class="modal-title"
+                                                                            id="removeBillboardModalLabel">Delete Billboard</h5><button
+                                                                            class="btn p-1"
+                                                                            type="button"
+                                                                            data-bs-dismiss="modal"
+                                                                            aria-label="Close"><span
+                                                                                class="fas fa-times fs--1"></span></button>
+                                                                    </div>
+                                                                    <div
+                                                                        class="modal-body">
+                                                                        <p
+                                                                            class="text-700 lh-lg mb-0">Seriously, are you sure you want to proceed deleting this Billboard?
+                                                                        </p>
+                                                                    </div>
+                                                                    <div
+                                                                        class="modal-footer"><button
+                                                                            class="btn btn-danger"
+                                                                            type="button">Yes</button>
+                                                                            <button
+                                                                            class="btn btn-outline-danger"
+                                                                            type="button"
+                                                                            data-bs-dismiss="modal">No</button></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                         </td>
                                                     </tr>
 
@@ -2063,7 +2204,7 @@
                                 </div>
                             </div>
 
-                        </div>
+                        
 
                         <!--Admin Payment-->
 
@@ -2228,13 +2369,8 @@
                                                                     style>
                                                                     <a
                                                                         class="dropdown-item"
-                                                                        href="userdetails.html">View</a><a
-                                                                        class="dropdown-item"
-                                                                        href="#!">Export</a>
-                                                                    <div
-                                                                        class="dropdown-divider"></div><a
-                                                                        class="dropdown-item text-danger"
-                                                                        href="#!">Remove</a>
+                                                                        href="userdetails.html">View</a>
+                                                                    
                                                                 </div>
                                                             </div>
                                                         </td>
@@ -2494,6 +2630,191 @@
                                 </div>
                             </div>
                         </div>
+
+                         <!--Agency Images-->
+          <div class="tab-pane fade" id="tab-images" role="tabpanel" aria-labelledby="images-tab">
+            <div class="mb-9">
+              <div class="row g-2 mb-4">
+                <div class="col-auto">
+                  <h2 class="mb-0">Manage Billboards Images</h2>
+                </div>
+              </div>
+
+              <div id="products"
+                data-list='{"valueNames":["user","email","phone-number","subscription",],"page":10,"pagination":true}'>
+                <form
+                class="row row-cols-lg-5 g-3 align-items-center justify-content-between mb-2">
+                <div class="col-12 search-box">
+
+                    <input
+                        class="form-control search-input search"
+                        type="search"
+                        placeholder="Search a Location"
+                        aria-label="Search" />
+                    <span
+                        class="fas fa-search search-box-icon"></span>
+
+                </div>
+
+              
+
+                <div class="col-12 d-grid  ">
+                    <button class="btn btn-primary "
+                        type="submit">Search</button>
+                </div>
+
+                <div class="col-12 align-items-center">
+                    <div
+                        class="form-check mb-0 p-0 d-flex">
+                        <button
+                            class="btn btn-link text-900 me-4 ms-0 p-0"><span
+                                class="fa-solid fa-file-export fs--1 me-2"></span>Export</button>
+
+                
+                    </div>
+
+                </div>
+
+            </form>
+                
+                <div id="tableExample"
+                  data-list="{&quot;valueNames&quot;:[&quot;name&quot;,&quot;email&quot;,&quot;age&quot;],&quot;page&quot;:5,&quot;pagination&quot;:true}">
+                  <div class="table-responsive mx-n1 px-1">
+                    <table class="table table-sm border-top border-200 fs--1 mb-0">
+                      <thead>
+                        <tr>
+                          <th class="white-space-nowrap fs--1 align-middle ps-0" style="max-width:20px; width:18px;">
+                            <div class="form-check mb-0 fs-0"><input class="form-check-input" id="bulk-select-example"
+                                type="checkbox"
+                                data-bulk-select="{&quot;body&quot;:&quot;bulk-select-body&quot;,&quot;actions&quot;:&quot;bulk-select-actions&quot;,&quot;replacedElement&quot;:&quot;bulk-select-replace-element&quot;}">
+                            </div>
+                          </th>
+                          <th class="sort align-middle ps-3" data-sort="name">Name</th>
+                          <th class="sort align-middle ps-3" data-sort="ad-agency">Category</th>
+                          <th class="sort align-middle" data-sort="Rating">Rating</th>
+                          <th class="sort align-middle" data-sort="desc">Description</th>
+                          <th class="sort align-middle" data-sort="img">Images</th>
+                          <th class="sort align-middle" data-sort="address">Address</th>
+                          <th class="sort text-end align-middle pe-0" scope="col">ACTION</th>
+                        </tr>
+                      </thead>
+                      <tbody class="list" id="bulk-select-body">
+                        <tr>
+                          <td class="fs--1 align-middle">
+                            <div class="form-check mb-0 fs-0"><input class="form-check-input" type="checkbox"
+                                data-bulk-select-row="{&quot;name&quot;:&quot;Anna&quot;,&quot;Rating&quot;:&quot;anna@example.com&quot;,&quot;age&quot;:18}">
+                            </div>
+                          </td>
+                          <td class="align-middle ps-3 name">Jumia</td>
+                          <td class="align-middle ad-agency">Christmas</td>
+                          <td class="align-middle rating">8.5/10</td>
+                          <td class="align-middle desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, fugiat. Aspernatur pariatur explicabo impedit exercitationem nam. Esse corporis dicta vel, doloremque eveniet praesentium pariatur distinctio nemo velit, expedita possimus incidunt.</td>
+                          <td class="align-middle img">
+
+                            <a data-bs-toggle="modal" data-bs-target="#verticallyCentered"><img
+                                src="../../../assets/img/billboard/IMG_0780.JPG" class="img-fluid" alt="..." width="40"
+                                height="40"></a>
+                            <div class="modal fade" id="verticallyCentered" tabindex="-1"
+                              aria-labelledby="verticallyCenteredModalLabel" aria-hidden="true">
+                              <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button class="btn p-1" type="button" data-bs-dismiss="modal"
+                                      aria-label="Close"><span class="fas fa-times fs--1"></span></button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <img src="../../../assets/img/billboard/IMG_0780.JPG" class="img-fluid" alt="...">
+                                  </div>
+                                  <div class="modal-footer"><button class="btn btn-outline-primary" type="button"
+                                      data-bs-dismiss="modal">Close</button></div>
+                                </div>
+                              </div>
+                            </div>
+
+                          </td>
+                          <td class="align-middle address">Magadi Road</td>
+
+                          <td class="align-middle white-space-nowrap text-end pe-0">
+                            <div class="font-sans-serif btn-reveal-trigger position-static">
+                              <button
+                                class="btn btn-sm dropdown-toggle dropdown-caret-none transition-none btn-reveal fs--2"
+                                type="button" data-bs-toggle="dropdown" data-boundary="window" aria-haspopup="true"
+                                aria-expanded="false" data-bs-reference="parent"><svg
+                                  class="svg-inline--fa fa-ellipsis fs--2" aria-hidden="true" focusable="false"
+                                  data-prefix="fas" data-icon="ellipsis" role="img" xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 448 512" data-fa-i2svg>
+                                  <path fill="currentColor"
+                                    d="M120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200C94.93 200 120 225.1 120 256zM280 256C280 286.9 254.9 312 224 312C193.1 312 168 286.9 168 256C168 225.1 193.1 200 224 200C254.9 200 280 225.1 280 256zM328 256C328 225.1 353.1 200 384 200C414.9 200 440 225.1 440 256C440 286.9 414.9 312 384 312C353.1 312 328 286.9 328 256z">
+                                  </path>
+                                </svg>
+                                <!-- <span class="fas fa-ellipsis-h fs--2"></span> Font Awesome fontawesome.com --></button>
+                              <div class="dropdown-menu dropdown-menu-end py-2" style><a class="dropdown-item"
+                                  href="view.html">View</a><a class="dropdown-item" href="#!">Edit</a>
+                               
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="d-flex flex-between-center pt-3 mb-3">
+                    <div class="pagination d-none">
+                      <li class="active"><button class="page" type="button" data-i="1" data-page="5">1</button></li>
+                      <li><button class="page" type="button" data-i="2" data-page="5">2</button></li>
+                      <li><button class="page" type="button" data-i="3" data-page="5">3</button></li>
+                    </div>
+                    <p class="mb-0 fs--1">
+                      <span class="d-none d-sm-inline-block" data-list-info="data-list-info">1 to 5
+                        <span class="text-600"> Items of </span>15</span>
+                      <span class="d-none d-sm-inline-block"> — </span>
+                      <a class="fw-semi-bold" href="#!" data-list-view="*">
+                        View all
+                        <svg class="svg-inline--fa fa-angle-right ms-1" data-fa-transform="down-1" aria-hidden="true"
+                          focusable="false" data-prefix="fas" data-icon="angle-right" role="img"
+                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg
+                          style="transform-origin: 0.25em 0.5625em;">
+                          <g transform="translate(128 256)">
+                            <g transform="translate(0, 32)  scale(1, 1)  rotate(0 0 0)">
+                              <path fill="currentColor"
+                                d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
+                                transform="translate(-128 -256)"></path>
+                            </g>
+                          </g>
+                        </svg>
+                        <!-- <span class="fas fa-angle-right ms-1" data-fa-transform="down-1"></span> Font Awesome fontawesome.com -->
+                      </a><a class="fw-semi-bold d-none" href="#!" data-list-view="less">
+                        View Less
+                        <svg class="svg-inline--fa fa-angle-right ms-1" data-fa-transform="down-1" aria-hidden="true"
+                          focusable="false" data-prefix="fas" data-icon="angle-right" role="img"
+                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg
+                          style="transform-origin: 0.25em 0.5625em;">
+                          <g transform="translate(128 256)">
+                            <g transform="translate(0, 32)  scale(1, 1)  rotate(0 0 0)">
+                              <path fill="currentColor"
+                                d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
+                                transform="translate(-128 -256)"></path>
+                            </g>
+                          </g>
+                        </svg>
+                        <!-- <span class="fas fa-angle-right ms-1" data-fa-transform="down-1"></span> Font Awesome fontawesome.com -->
+                      </a>
+                    </p>
+                    <div class="d-flex">
+                      <button class="btn btn-sm btn-primary disabled" type="button" data-list-pagination="prev"
+                        disabled><span>Previous</span></button>
+                      <button class="btn btn-sm btn-primary px-4 ms-2" type="button"
+                        data-list-pagination="next"><span>Next</span></button>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
                     </div>
 
                 </div>

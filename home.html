@@ -71,62 +71,129 @@
     <main class="main" id="top">
         <div class="bg-white sticky-top landing-navbar" data-navbar-shadow-on-scroll="data-navbar-shadow-on-scroll">
             <nav class="navbar navbar-expand-lg container-small px-3 px-lg-7 px-xxl-3"><a
-                    class="navbar-brand flex-1 flex-lg-grow-0" href="../../index.html">
+                    class="navbar-brand flex-1 flex-lg-grow-0" href="../../home.html">
                     <div class="d-flex align-items-center"><img src="../../assets/img/icons/logo.png" alt="phoenix"
                             width="27" />
                         <p class="logo-text ms-2">BillonBoard</p>
                     </div>
                 </a>
                 <div class="d-lg-none justify-content-end">
-                    <div class="theme-control-toggle fa-icon-wait px-2"><input
-                            class="form-check-input ms-0 theme-control-toggle-input" type="checkbox"
-                            data-theme-control="phoenixTheme" value="dark" id="themeControlToggleSm" /><label
+                    <div class="theme-control-toggle fa-icon-wait px-2">
+                        <input
+                            class="form-check-input ms-0 theme-control-toggle-input" 
+                            type="checkbox"
+                            data-theme-control="phoenixTheme" 
+                            value="dark" 
+                            id="themeControlToggleSm" />
+                        <label
                             class="mb-0 theme-control-toggle-label theme-control-toggle-light"
-                            for="themeControlToggleSm" data-bs-toggle="tooltip" data-bs-placement="left"
-                            title="Switch theme"><span class="icon" data-feather="moon"></span></label><label
-                            class="mb-0 theme-control-toggle-label theme-control-toggle-dark" for="themeControlToggleSm"
-                            data-bs-toggle="tooltip" data-bs-placement="left" title="Switch theme"><span class="icon"
-                                data-feather="sun"></span></label></div>
-                </div><button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation"><span
-                        class="navbar-toggler-icon"></span></button>
+                            for="themeControlToggleSm" 
+                            data-bs-toggle="tooltip" 
+                            data-bs-placement="left"
+                            title="Switch theme"
+                        >
+                            <span 
+                                class="icon" 
+                                data-feather="moon"></span>
+                        </label>
+                        <label
+                            class="mb-0 theme-control-toggle-label theme-control-toggle-dark" 
+                            for="themeControlToggleSm"
+                            data-bs-toggle="tooltip" 
+                            data-bs-placement="left" 
+                            title="Switch theme"
+                        >
+                            <span 
+                                class="icon"
+                                data-feather="sun">
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <button 
+                    class="navbar-toggler" 
+                    type="button" 
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" 
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-
                     <div class="col-auto order-md-1">
                         <ul class="navbar-nav navbar-nav-icons flex-row me-n2">
-
-                            <li class="nav-item dropdown"><a class="nav-link px-2" id="navbarDropdownUser"
-                                    href="homepage.html#" role="button" data-bs-toggle="dropdown"
-                                    data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false"><span
-                                        class="text-700" data-feather="user" style="height:20px;width:20px;"></span></a>
-                                <div class="dropdown-menu dropdown-menu-end navbar-dropdown-caret py-0 dropdown-profile shadow border border-300 mt-2"
-                                    aria-labelledby="navbarDropdownUser">
+                            <li class="nav-item dropdown">
+                                <div class="d-flex flex-direction-row">
+                                    <a 
+                                        class="nav-link px-2 d-flex mr-3"
+                                        href="./profile.html"
+                                    >
+                                        <span
+                                            class="text-700 mr-2" 
+                                            data-feather="user" 
+                                            style="height:20px;width:20px;"
+                                        >
+                                        </span>
+                                        <span class="text-500">Profile</span>
+                                    </a>
+                                    <a 
+                                        class="btn d-flex flex-center w-100 btn-primary"
+                                        id="sign-out"
+                                    > 
+                                        <span 
+                                            class="me-2" 
+                                            data-feather="log-out"
+                                        >
+                                        </span>
+                                        <span>
+                                            Sign out
+                                        </span>
+                                    </a>
+                                </div>
+                                <div 
+                                    class="dropdown-menu dropdown-menu-end navbar-dropdown-caret py-0 dropdown-profile shadow border border-300 mt-2"
+                                    aria-labelledby="navbarDropdownUser"
+                                >
                                     <div class="card position-relative border-0">
                                         <div class="card-body p-0">
                                             <div class="text-center pt-4 pb-3">
                                                 <div class="avatar avatar-xl ">
-                                                    <img class="rounded-circle "
-                                                        src="../../../assets/img/team/72x72/57.webp" alt="" />
+                                                    <img 
+                                                        class="rounded-circle "
+                                                        src="../../../assets/img/team/72x72/57.webp" alt="" 
+                                                    />
                                                 </div>
-                                                <h6 class="mt-2 text-black">Jane Doe</h6>
+                                                <h6 
+                                                    class="mt-2 text-black"
+                                                >
+                                                    Jane Doe
+                                                </h6>
                                             </div>
-
                                         </div>
                                         <div class="overflow-auto scrollbar">
                                             <ul class="nav d-flex flex-column mb-2 pb-1">
-                                                <li class="nav-item"><a class="nav-link px-3" href="profile.html">
+                                                <li class="nav-item">
+                                                    <a class="nav-link px-3" href="profile.html">
                                                         <span class="me-2 text-900"
-                                                            data-feather="user"></span><span>Profile</span></a></li>
+                                                            data-feather="user">
+                                                        </span>
+                                                        <span>Profile</span>
+                                                    </a>
+                                                </li>
 
                             </li>
 
                         </ul>
                     </div>
                     <div class="card-footer p-0 border-top">
-                        <div class=""> <a class="btn btn-phoenix-secondary d-flex flex-center w-100"
-                                href="login.html"> <span class="me-2" data-feather="log-out">
-                                </span>Sign out</a></div>
+                        <div class=""> 
+                            <a class="btn btn-phoenix-secondary d-flex flex-center w-100"
+                                id="sign-out"> <span class="me-2" data-feather="log-out">
+                                </span>Sign out
+                            </a>
+                    </div>
 
                     </div>
                 </div>
@@ -156,37 +223,25 @@
             <div class="card text-dark bg-light m-5 ">
                 <hr>
             <form class="row row-cols-lg-5 g-3  m-3 justify-content-center">
+                <div class="col-12 ms-1">
+                    <label class="sr-only" for="locationselector">Location</label>
+                    <input class="form-control" id="locationselector" type="text" placeholder="Enter a Location">
+                </div>
                 <div class="col-12 ms-1 ">
-                    <label class="sr-only" for="inlineFormSelectPref">Ad Agency</label>
-                    <select class="form-select" id="inlineFormSelectPref">
-                      <option> Select Ad Agency</option>
-                                <option>Magnate Ventures</option>
-                                <option>Firmbridge Advertisment</option>
-                                <option>BMA</option>
-                                <option>Look Media</option>
-                                <option>Alliance Media</option>
-                                <option>Ad Site</option>
+                    <label class="sr-only" for="adagencyselector">Ad Agency</label>
+                    <select class="form-select" id="adagencyselector">
+                                <option value=" "> Select Ad Agency</option>
+                                <option value="Magnate Ventures">Magnate Ventures</option>
+                                <option value="Firmbridge Advertisment">Firmbridge Advertisment</option>
+                                <option value="BMA">BMA</option>
+                                <option value="Look Media">Look Media</option>
+                                <option value="Alliance Media">Alliance Media</option>
+                                <option value="Ad Site">Ad Site</option>
                     </select>
-                  </div>
-                <div class="col-12 ms-1">
-                  <label class="sr-only" for="inlineFormInputName">Location</label>
-                  <input class="form-control" id="inlineFormInputName" type="text" placeholder="Enter a Location">
                 </div>
                 <div class="col-12 ms-1">
-                  <label class="sr-only" for="inlineFormInputGroupUsername">Brand</label>
-                  
-                    <input class="form-control" id="inlineFormInputGroupUsername" type="text" placeholder="Search for a Brand">
-                  
+                    <input class="form-control flex-1" autocomplete="off" type="search" id="searchbox" placeholder="Search for billboard by name">
                 </div>
-
-                <div class="col-12 ms-1">
-                    <label class="sr-only" for="inlineFormInputGroupUsername">Season</label>
-                    
-                      <input class="form-control" id="inlineFormInputGroupUsername" type="text" placeholder="Search for a specific Season / Category">
-                    
-                  </div>
-                
-                
                 <div class="col-12">
                   <button class="btn btn-primary" type="submit">Search</button>
                 </div>
@@ -238,7 +293,8 @@
       for more information.
       -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
-        <script src="./scripts/get_all_billboards.js"></script> 
+        <script src="./scripts/get_all_billboards.js"></script>
+        <script src="./scripts/signout.js"></script> 
     <script>
         function initMap() {
             //map options

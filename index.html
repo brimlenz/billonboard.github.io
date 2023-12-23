@@ -62,34 +62,55 @@
     <main style="--phoenix-scroll-margin-top: 1.2rem;">
         <div class="bg-white sticky-top landing-navbar" data-navbar-shadow-on-scroll="data-navbar-shadow-on-scroll">
             <nav class="navbar navbar-expand-lg container-small px-3 px-lg-7 px-xxl-3"><a
-                    class="navbar-brand flex-1 flex-lg-grow-0" href="../../index.html">
+                    class="navbar-brand flex-1 flex-lg-grow-0" href="../../home.html">
                     <div class="d-flex align-items-center"><img src="../../assets/img/icons/logo.png" alt="phoenix"
                             width="27" />
                         <p class="logo-text ms-2">BillonBoard</p>
                     </div>
                 </a>
                 <div class="d-lg-none justify-content-end">
-                    <div class="theme-control-toggle fa-icon-wait px-2"><input
+                    <div class="theme-control-toggle fa-icon-wait px-2">
+                        <input
                             class="form-check-input ms-0 theme-control-toggle-input" type="checkbox"
-                            data-theme-control="phoenixTheme" value="dark" id="themeControlToggleSm" /><label
+                            data-theme-control="phoenixTheme" value="dark" id="themeControlToggleSm" />
+                        <label
                             class="mb-0 theme-control-toggle-label theme-control-toggle-light"
-                            for="themeControlToggleSm" data-bs-toggle="tooltip" data-bs-placement="left"
-                            title="Switch theme"><span class="icon" data-feather="moon"></span></label><label
-                            class="mb-0 theme-control-toggle-label theme-control-toggle-dark" for="themeControlToggleSm"
-                            data-bs-toggle="tooltip" data-bs-placement="left" title="Switch theme"><span class="icon"
-                                data-feather="sun"></span></label></div>
-                </div><button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation"><span
-                        class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-
-
-                    <div class="d-grid d-lg-flex align-items-center">
-                        <a class="btn btn-link text-900 order-1 order-lg-0 ps-3 me-2"
-                            href="login.html">LOGIN</a><a
-                            class="btn btn-phoenix-primary order-0" href="sign-up.html"><span class="fw-bold">Register</span></a>
+                            for="themeControlToggleSm" 
+                            data-bs-toggle="tooltip" 
+                            data-bs-placement="left"
+                            title="Switch theme"
+                        >
+                            <span class="icon" data-feather="moon"></span>
+                        </label>
+                        <label
+                            class="mb-0 theme-control-toggle-label theme-control-toggle-dark" 
+                            for="themeControlToggleSm"
+                            data-bs-toggle="tooltip" 
+                            data-bs-placement="left" 
+                            title="Switch theme"
+                        >
+                            <span 
+                                class="icon"
+                                data-feather="sun"
+                            ></span>
+                        </label>
                     </div>
+                </div>
+                <button 
+                    class="navbar-toggler" 
+                    type="button" 
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" 
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div 
+                    class="collapse navbar-collapse justify-content-end" 
+                    id="navbarSupportedContent"
+                >
                 </div>
             </nav>
         </div>
@@ -756,6 +777,7 @@
     <!-- ===============================================-->
     <!--    JavaScripts-->
     <!-- ===============================================-->
+    <script src="./scripts/authenticator.js"></script>
     <script src="../../vendors/popper/popper.min.js"></script>
     <script src="../../vendors/bootstrap/bootstrap.min.js"></script>
     <script src="../../vendors/anchorjs/anchor.min.js"></script>

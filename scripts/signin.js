@@ -10,7 +10,6 @@ function onFormSubmit(event) {
         user_input_value_tag:              dataObject.email,
         password:           dataObject.password,
     }
-    console.log(payload)
     axios.post("http://localhost:5001/api/signin/client",payload).then((res)=>{
         document.cookie = `user_token=${res.data}`;
         window.location.href = "home.html";
@@ -18,4 +17,11 @@ function onFormSubmit(event) {
         console.log(error)
         return error;
     })
+}
+
+let cookie = document.cookie;
+if(cookie === ''){
+    onFormSubmit()
+}else{
+    window.location.href = "home.html";
 }

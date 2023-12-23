@@ -23,3 +23,10 @@ function onFormSubmit(event) {
         console.log(error)
     })
 }
+
+let cookie = document.cookie;
+if(cookie === ''){
+    onFormSubmit()
+}else{
+    window.location.href = "home.html";
+}

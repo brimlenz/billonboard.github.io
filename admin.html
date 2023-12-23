@@ -539,33 +539,71 @@
               <div id="products"
                 data-list='{"valueNames":["user","email","phone-number","subscription",],"page":10,"pagination":true}'>
 
+                <form
+                                        class="row row-cols-lg-5 g-3 align-items-center justify-content-between mb-2">
+                                        <div class="col-12 search-box">
+
+                                            <input
+                                                class="form-control search-input search"
+                                                type="search"
+                                                placeholder="Search a Location"
+                                                aria-label="Search" />
+                                            <span
+                                                class="fas fa-search search-box-icon"></span>
+
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label class="sr-only"
+                                                for="inlineFormSelectPref">Type</label>
+                                            <select class="form-select"
+                                                id="inlineFormSelectPref">
+                                                <option selected>All</option>
+                                                <option value="1">One Sided</option>
+                                                <option value="2">Two Sided</option>
+                                                <option value="3">Triple Sided</option>
+                                                <option value="4">Digital</option>
+                                                <option value="5">Available</option>
+                                                <option value="6">Other</option>
+
+                                            </select>
+                                        </div>
+
+                                        <div class="col-12 d-grid  ">
+                                            <button class="btn btn-primary "
+                                                type="submit">Search</button>
+                                        </div>
+
+                                        <div class="col-12 align-items-center">
+                                            <div
+                                                class="form-check mb-0 p-0 d-flex">
+                                                <button
+                                                    class="btn btn-link text-900 me-4 ms-0 p-0"><span
+                                                        class="fa-solid fa-file-export fs--1 me-2"></span>Export</button>
+
+                                                <!--Modal button-->
+
+                                                <button
+                                                    class="btn btn-sm btn-primary"
+                                                    type="button"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#newBillBoard"><span
+                                                        class="fas fa-plus me-2"></span>Add
+                                                    Billboards</button>
+                                            </div>
+
+                                        </div>
+
+                                    </form>
+
                 <div class="d-flex align-items-center justify-content-end my-3">
 
-                  <div class="col-auto">
-                    <div class="search-box me-2">
-                      <form class="position-relative" data-bs-toggle="search" data-bs-display="static"><input
-                          class="form-control search-input search" type="search" placeholder="Search Location"
-                          aria-label="Search" />
-                        <span class="fas fa-search search-box-icon"></span>
-                      </form>
-                    </div>
 
-                  </div>
-
-                  <div id="bulk-select-replace-element">
-                    <button class="btn btn-link text-900 me-4 px-0"><span
-                        class="fa-solid fa-file-export fs--1 me-2"></span>Export</button>
-                        
-                        <button
-                      class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><span class="fas fa-plus me-2"></span>Add
-                      Billboards</button>
-
-
-                      <div class="modal fade" id="staticBackdrop" tabindex="-1" data-bs-backdrop="static" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal fade" id="newBillBoard" tabindex="-1" data-bs-backdrop="static" aria-labelledby="newBillBoardLabel" aria-hidden="true">
                         <div class="modal-dialog">
                           <div class="modal-content">
                             <div class="modal-header bg-primary">
-                              <h5 class="modal-title text-white" id="staticBackdropLabel">Add a New Billboard</h5><button class="btn p-1" type="button" data-bs-dismiss="modal" aria-label="Close"><span class="fas fa-times fs--1 text-white"></span></button>
+                              <h5 class="modal-title text-white" id="newBillBoardLabel">Add a New Billboard</h5><button class="btn p-1" type="button" data-bs-dismiss="modal" aria-label="Close"><span class="fas fa-times fs--1 text-white"></span></button>
                             </div>
                             <div class="modal-body">
 
@@ -672,10 +710,51 @@
                                 <!-- <span class="fas fa-ellipsis-h fs--2"></span> Font Awesome fontawesome.com --></button>
                               <div class="dropdown-menu dropdown-menu-end py-2" style><a class="dropdown-item"
                                   href="view.html">View</a><a class="dropdown-item" href="#!">Edit</a>
-                                <div class="dropdown-divider"></div><a class="dropdown-item text-danger"
-                                  href="#!">Remove</a>
-                              </div>
+                                <div class="dropdown-divider"></div><a
+                                class="dropdown-item text-danger"
+                                href="#!" data-bs-toggle="modal" data-bs-target="#removeBillboard">Remove
+                                
+                            </a>
                             </div>
+                            <!--Modal for deleting a billboard-->
+                                                           
+                            <div class="modal fade"
+                            id="removeBillboard"
+                            tabindex="-1"
+                            aria-labelledby="removeBillboardModalLabel"
+                            aria-hidden="true">
+                            <div
+                                class="modal-dialog modal-dialog-centered">
+                                <div
+                                    class="modal-content">
+                                    <div
+                                        class="modal-header">
+                                        <h5
+                                            class="modal-title"
+                                            id="removeBillboardModalLabel">Delete Billboard</h5><button
+                                            class="btn p-1"
+                                            type="button"
+                                            data-bs-dismiss="modal"
+                                            aria-label="Close"><span
+                                                class="fas fa-times fs--1"></span></button>
+                                    </div>
+                                    <div
+                                        class="modal-body">
+                                        <p
+                                            class="text-700 lh-lg mb-0">Seriously, are you sure you want to proceed deleting this Billboard?
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="modal-footer"><button
+                                            class="btn btn-danger"
+                                            type="button">Yes</button>
+                                            <button
+                                            class="btn btn-outline-danger"
+                                            type="button"
+                                            data-bs-dismiss="modal">No</button></div>
+                                </div>
+                            </div>
+                        </div>
                           </td>
                         </tr>
 
@@ -750,34 +829,41 @@
 
               <div id="products"
                 data-list='{"valueNames":["user","email","phone-number","subscription",],"page":10,"pagination":true}'>
+                <form
+                class="row row-cols-lg-5 g-3 align-items-center justify-content-between mb-2">
+                <div class="col-12 search-box">
 
-                <div class="d-flex align-items-center justify-content-end my-3">
+                    <input
+                        class="form-control search-input search"
+                        type="search"
+                        placeholder="Search a Location"
+                        aria-label="Search" />
+                    <span
+                        class="fas fa-search search-box-icon"></span>
 
-                  <div class="col-auto">
-                    <div class="search-box me-2">
-                      <form class="position-relative" data-bs-toggle="search" data-bs-display="static"><input
-                          class="form-control search-input search" type="search" placeholder="Search Location"
-                          aria-label="Search" />
-                        <span class="fas fa-search search-box-icon"></span>
-                      </form>
+                </div>
+
+              
+
+                <div class="col-12 d-grid  ">
+                    <button class="btn btn-primary "
+                        type="submit">Search</button>
+                </div>
+
+                <div class="col-12 align-items-center">
+                    <div
+                        class="form-check mb-0 p-0 d-flex">
+                        <button
+                            class="btn btn-link text-900 me-4 ms-0 p-0"><span
+                                class="fa-solid fa-file-export fs--1 me-2"></span>Export</button>
+
+                
                     </div>
 
-                  </div>
-
-                  <div id="bulk-select-replace-element">
-                    <button class="btn btn-link text-900 me-4 px-0"><span
-                        class="fa-solid fa-file-export fs--1 me-2"></span>Export</button>
-
-                      
-                  </div>
-                  <div class="d-none ms-3" id="bulk-select-actions">
-                    <div class="d-flex"><select class="form-select form-select-sm" aria-label="Bulk actions">
-                        <option selected="selected">Bulk actions</option>
-                        <option value="Delete">Delete</option>
-
-                      </select><button class="btn btn-phoenix-danger btn-sm ms-2" type="button">Apply</button></div>
-                  </div>
                 </div>
+
+            </form>
+                
                 <div id="tableExample"
                   data-list="{&quot;valueNames&quot;:[&quot;name&quot;,&quot;email&quot;,&quot;age&quot;],&quot;page&quot;:5,&quot;pagination&quot;:true}">
                   <div class="table-responsive mx-n1 px-1">
